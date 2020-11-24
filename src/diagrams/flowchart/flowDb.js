@@ -33,10 +33,10 @@ export const parseDirective = function(statement, context, type) {
  * @public
  */
 export const lookUpDomId = function(id) {
-  const veritceKeys = Object.keys(vertices);
-  for (let i = 0; i < veritceKeys.length; i++) {
-    if (vertices[veritceKeys[i]].id === id) {
-      return vertices[veritceKeys[i]].domId;
+  const verticeKeys = Object.keys(vertices);
+  for (let i = 0; i < verticeKeys.length; i++) {
+    if (vertices[verticeKeys[i]].id === id) {
+      return vertices[verticeKeys[i]].domId;
     }
   }
   return id;
@@ -315,6 +315,7 @@ export const bindFunctions = function(element) {
 export const getDirection = function() {
   return direction.trim();
 };
+
 /**
  * Retrieval function for fetching the found nodes after parsing has completed.
  * @returns {{}|*|vertices}
@@ -403,7 +404,6 @@ export const setGen = ver => {
   version = ver || 'gen-1';
 };
 /**
- *
  * @returns {string}
  */
 export const defaultStyle = function() {
@@ -411,7 +411,7 @@ export const defaultStyle = function() {
 };
 
 /**
- * Clears the internal graph db so that a new graph can be parsed.
+ * Function called by parser when a subgraph node definition has been found
  */
 export const addSubGraph = function(_id, list, _title) {
   let id = _id.trim();
@@ -419,6 +419,7 @@ export const addSubGraph = function(_id, list, _title) {
   if (_id === _title && _title.match(/\s/)) {
     id = undefined;
   }
+
   function uniq(a) {
     const prims = { boolean: {}, number: {}, string: {} };
     const objs = [];
@@ -485,6 +486,7 @@ const getPosForId = function(id) {
   }
   return -1;
 };
+
 let secCount = -1;
 const posCrossRef = [];
 const indexNodes2 = function(id, pos) {
@@ -530,6 +532,7 @@ const indexNodes2 = function(id, pos) {
 export const getDepthFirstPos = function(pos) {
   return posCrossRef[pos];
 };
+
 export const indexNodes = function() {
   secCount = -1;
   if (subGraphs.length > 0) {
@@ -669,7 +672,7 @@ const destructLink = (_str, _startStr) => {
   return info;
 };
 
-// Todo optimizer this by caching existing nodes
+// Todo optimize this by caching existing nodes
 const exists = (allSgs, _id) => {
   let res = false;
   allSgs.forEach(sg => {

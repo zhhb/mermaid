@@ -27,6 +27,7 @@
 <struct>[\n]            /* nothing */
 <struct>[^{}\n]*        { /*console.log('lex-member: ' + yytext);*/  return "MEMBER";}
 
+"package"             return 'PACKAGE';
 "class"               return 'CLASS';
 "cssClass"            return 'CSSCLASS';
 "callback"            return 'CALLBACK';
@@ -175,6 +176,10 @@ statements
     | statement NEWLINE statements
     ;
 
+packageName
+    : alphaNumToken { $$=$1; }
+    ;
+
 className
     : alphaNumToken { $$=$1; }
     | alphaNumToken className { $$=$1+$2; }
@@ -183,11 +188,12 @@ className
     ;
 
 statement
-    : relationStatement       { yy.addRelation($1); }
-    | relationStatement LABEL { $1.title =  yy.cleanupLabel($2); yy.addRelation($1);        }
+    : relationStatement                 { yy.addRelation($1); }
+    | relationStatement LABEL           { $1.title =  yy.cleanupLabel($2); yy.addRelation($1); }
     | classStatement
     | methodStatement
     | annotationStatement
+    | packageStatement                  
     | clickStatement
     | cssClassStatement
     | directive
@@ -242,6 +248,10 @@ lineType
     | DOTTED_LINE   {$$=yy.lineType.DOTTED_LINE;}
     ;
 
+packageStatement
+    : PACKAGE packageName className { yy.addPackage($2, $3); }
+    ;
+    
 clickStatement
     : CALLBACK className STR        {$$ = $1;yy.setClickEvent($2, $3, undefined);}
     | CALLBACK className STR STR    {$$ = $1;yy.setClickEvent($2, $3, $4);}
@@ -259,6 +269,6 @@ textToken      : textNoTagsToken | TAGSTART | TAGEND | '=='  | '--' | PCT | DEFA
 
 textNoTagsToken: alphaNumToken | SPACE | MINUS | keywords ;
 
-alphaNumToken  : UNICODE_TEXT | NUM | ALPHA;
+alphaNumToken  : UNICODE_TEXT | NUM | ALPHA | DOT;
 
 %%

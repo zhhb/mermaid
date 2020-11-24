@@ -656,7 +656,7 @@ module.exports = function(module) {
 /*! exports provided: name, version, description, main, keywords, scripts, repository, author, license, standard, dependencies, devDependencies, files, yarn-upgrade-all, sideEffects, husky, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"name\":\"mermaid\",\"version\":\"8.8.2\",\"description\":\"Markdownish syntax for generating flowcharts, sequence diagrams, class diagrams, gantt charts and git graphs.\",\"main\":\"dist/mermaid.core.js\",\"keywords\":[\"diagram\",\"markdown\",\"flowchart\",\"sequence diagram\",\"gantt\",\"class diagram\",\"git graph\"],\"scripts\":{\"build:development\":\"webpack --progress --colors\",\"build:production\":\"yarn build:development -p --config webpack.config.prod.babel.js\",\"build\":\"yarn build:development && yarn build:production\",\"postbuild\":\"documentation build src/mermaidAPI.js src/config.js --shallow -f md --markdown-toc false | sed '1i---\\\\nsort: 3\\\\ntitle: Configurations\\\\n---\\\\n' > docs/getting-started/Setup.md\",\"build:watch\":\"yarn build --watch\",\"minify\":\"minify ./dist/mermaid.js > ./dist/mermaid.min.js\",\"release\":\"yarn build\",\"lint\":\"eslint src\",\"e2e:depr\":\"yarn lint && jest e2e --config e2e/jest.config.js\",\"cypress\":\"percy exec -- cypress run\",\"e2e\":\"start-server-and-test dev http://localhost:9000/ cypress\",\"e2e-upd\":\"yarn lint && jest e2e -u --config e2e/jest.config.js\",\"dev\":\"webpack-dev-server --config webpack.config.e2e.js\",\"test\":\"yarn lint && jest src/.*\",\"test:watch\":\"jest --watch src\",\"prepublishOnly\":\"yarn build && yarn test\",\"prepare\":\"yarn build\"},\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/knsv/mermaid\"},\"author\":\"Knut Sveidqvist\",\"license\":\"MIT\",\"standard\":{\"ignore\":[\"**/parser/*.js\",\"dist/**/*.js\",\"cypress/**/*.js\"],\"globals\":[\"page\"]},\"dependencies\":{\"@braintree/sanitize-url\":\"^3.1.0\",\"babel-eslint\":\"^10.1.0\",\"d3\":\"^5.7.0\",\"dagre\":\"^0.8.4\",\"dagre-d3\":\"^0.6.4\",\"entity-decode\":\"^2.0.2\",\"graphlib\":\"^2.1.7\",\"he\":\"^1.2.0\",\"khroma\":\"^1.1.0\",\"minify\":\"^4.1.1\",\"moment-mini\":\"^2.22.1\",\"stylis\":\"^3.5.2\"},\"devDependencies\":{\"@babel/core\":\"^7.2.2\",\"@babel/preset-env\":\"^7.8.4\",\"@babel/register\":\"^7.0.0\",\"@percy/cypress\":\"*\",\"babel-core\":\"7.0.0-bridge.0\",\"babel-jest\":\"^24.9.0\",\"babel-loader\":\"^8.0.4\",\"coveralls\":\"^3.0.2\",\"css-loader\":\"^2.0.1\",\"css-to-string-loader\":\"^0.1.3\",\"cypress\":\"4.0.1\",\"documentation\":\"^12.0.1\",\"eslint\":\"^6.3.0\",\"eslint-config-prettier\":\"^6.3.0\",\"eslint-plugin-prettier\":\"^3.1.0\",\"husky\":\"^1.2.1\",\"identity-obj-proxy\":\"^3.0.0\",\"jest\":\"^24.9.0\",\"jison\":\"^0.4.18\",\"moment\":\"^2.23.0\",\"node-sass\":\"^4.12.0\",\"prettier\":\"^1.18.2\",\"puppeteer\":\"^1.17.0\",\"sass-loader\":\"^7.1.0\",\"start-server-and-test\":\"^1.10.6\",\"terser-webpack-plugin\":\"^2.2.2\",\"webpack\":\"^4.41.2\",\"webpack-bundle-analyzer\":\"^3.7.0\",\"webpack-cli\":\"^3.1.2\",\"webpack-dev-server\":\"^3.4.1\",\"webpack-node-externals\":\"^1.7.2\",\"yarn-upgrade-all\":\"^0.5.0\"},\"files\":[\"dist\"],\"yarn-upgrade-all\":{\"ignore\":[\"babel-core\"]},\"sideEffects\":[\"**/*.css\",\"**/*.scss\"],\"husky\":{\"hooks\":{\"pre-push\":\"yarn test\"}}}");
+module.exports = JSON.parse("{\"name\":\"mermaid\",\"version\":\"8.8.3\",\"description\":\"Markdownish syntax for generating flowcharts, sequence diagrams, class diagrams, gantt charts and git graphs.\",\"main\":\"dist/mermaid.core.js\",\"keywords\":[\"diagram\",\"markdown\",\"flowchart\",\"sequence diagram\",\"gantt\",\"class diagram\",\"git graph\"],\"scripts\":{\"build:development\":\"webpack --progress --colors\",\"build:production\":\"yarn build:development -p --config webpack.config.prod.babel.js\",\"build\":\"yarn build:development && yarn build:production\",\"postbuild\":\"documentation build src/mermaidAPI.js src/config.js --shallow -f md --markdown-toc false > docs/Setup.md\",\"build:watch\":\"yarn build --watch\",\"minify\":\"minify ./dist/mermaid.js > ./dist/mermaid.min.js\",\"release\":\"yarn build\",\"lint\":\"eslint src\",\"e2e:depr\":\"yarn lint && jest e2e --config e2e/jest.config.js\",\"cypress\":\"percy exec -- cypress run\",\"e2e\":\"start-server-and-test dev http://localhost:9000/ cypress\",\"e2e-upd\":\"yarn lint && jest e2e -u --config e2e/jest.config.js\",\"dev\":\"webpack-dev-server --config webpack.config.e2e.js\",\"test\":\"yarn lint && jest src/.*\",\"test:watch\":\"jest --watch src\",\"prepublishOnly\":\"yarn build && yarn test\",\"prepare\":\"yarn build\"},\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/knsv/mermaid\"},\"author\":\"Knut Sveidqvist\",\"license\":\"MIT\",\"standard\":{\"ignore\":[\"**/parser/*.js\",\"dist/**/*.js\",\"cypress/**/*.js\"],\"globals\":[\"page\"]},\"dependencies\":{\"@braintree/sanitize-url\":\"^3.1.0\",\"babel-eslint\":\"^10.1.0\",\"d3\":\"^5.7.0\",\"dagre\":\"^0.8.4\",\"dagre-d3\":\"^0.6.4\",\"entity-decode\":\"^2.0.2\",\"graphlib\":\"^2.1.7\",\"he\":\"^1.2.0\",\"khroma\":\"^1.1.0\",\"minify\":\"^4.1.1\",\"moment-mini\":\"^2.22.1\",\"stylis\":\"^3.5.2\"},\"devDependencies\":{\"@babel/core\":\"^7.2.2\",\"@babel/preset-env\":\"^7.8.4\",\"@babel/register\":\"^7.0.0\",\"@percy/cypress\":\"*\",\"babel-core\":\"7.0.0-bridge.0\",\"babel-jest\":\"^24.9.0\",\"babel-loader\":\"^8.0.4\",\"coveralls\":\"^3.0.2\",\"css-loader\":\"^2.0.1\",\"css-to-string-loader\":\"^0.1.3\",\"cypress\":\"4.0.1\",\"documentation\":\"^12.0.1\",\"eslint\":\"^6.3.0\",\"eslint-config-prettier\":\"^6.3.0\",\"eslint-plugin-prettier\":\"^3.1.0\",\"husky\":\"^1.2.1\",\"identity-obj-proxy\":\"^3.0.0\",\"jest\":\"^24.9.0\",\"jison\":\"^0.4.18\",\"moment\":\"^2.23.0\",\"node-sass\":\"^4.12.0\",\"prettier\":\"^1.18.2\",\"puppeteer\":\"^1.17.0\",\"sass-loader\":\"^7.1.0\",\"start-server-and-test\":\"^1.10.6\",\"terser-webpack-plugin\":\"^2.2.2\",\"webpack\":\"^4.41.2\",\"webpack-bundle-analyzer\":\"^3.7.0\",\"webpack-cli\":\"^3.1.2\",\"webpack-dev-server\":\"^3.4.1\",\"webpack-node-externals\":\"^1.7.2\",\"yarn-upgrade-all\":\"^0.5.0\"},\"files\":[\"dist\"],\"yarn-upgrade-all\":{\"ignore\":[\"babel-core\"]},\"sideEffects\":[\"**/*.css\",\"**/*.scss\"],\"husky\":{\"hooks\":{\"pre-push\":\"yarn test\"}}}");
 
 /***/ }),
 
@@ -896,7 +896,7 @@ __webpack_require__.r(__webpack_exports__);
 var rect = function rect(parent, node) {
   _logger__WEBPACK_IMPORTED_MODULE_1__["logger"].trace('Creating subgraph rect for ', node.id, node); // Add outer g element
 
-  var shapeSvg = parent.insert('g').attr('class', 'cluster').attr('id', node.id); // add the rect
+  var shapeSvg = parent.insert('g').attr('class', 'cluster' + (node.class ? ' ' + node.class : '')).attr('id', node.id); // add the rect
 
   var rect = shapeSvg.insert('rect', ':first-child'); // Create the label and insert it after the rect
 
@@ -1138,7 +1138,8 @@ var createLabel = function createLabel(_vertexText, style, isTitle, isNode) {
       isNode: isNode,
       label: vertexText.replace(/fa[lrsb]?:fa-[\w-]+/g, function (s) {
         return "<i class='".concat(s.replace(':', ' '), "'></i>");
-      })
+      }),
+      labelStyle: style.replace('fill:', 'color:')
     };
     var vertexNode = addHtmlLabel(node); // vertexNode.parentNode.removeChild(vertexNode);
 
@@ -1466,7 +1467,7 @@ var intersection = function intersection(node, outsidePoint, insidePoint) {
     r = R * q / Q;
     var res = {
       x: insidePoint.x < outsidePoint.x ? insidePoint.x + R - r : insidePoint.x - r,
-      y: outsidePoint.y + q
+      y: insidePoint.y < outsidePoint.y ? insidePoint.y + Q - q : insidePoint.y - q
     };
     _logger__WEBPACK_IMPORTED_MODULE_0__["logger"].warn("topp/bott calc, Q ".concat(Q, ", q ").concat(q, ", R ").concat(R, ", r ").concat(r), res);
     return res;
@@ -1618,7 +1619,7 @@ var insertEdge = function insertEdge(elem, e, edge, clusterDb, diagramType, grap
       break;
   }
 
-  var svgPath = elem.append('path').attr('d', lineFunction(lineData)).attr('id', edge.id).attr('class', ' ' + strokeClasses + (edge.classes ? ' ' + edge.classes : '')); // DEBUG code, adds a red circle at each edge coordinate
+  var svgPath = elem.append('path').attr('d', lineFunction(lineData)).attr('id', edge.id).attr('class', ' ' + strokeClasses + (edge.classes ? ' ' + edge.classes : '')).attr('style', edge.style); // DEBUG code, adds a red circle at each edge coordinate
   // edge.points.forEach(point => {
   //   elem
   //     .append('circle')
@@ -4560,7 +4561,7 @@ config.git.arrowMarkerAbsolute = config.arrowMarkerAbsolute;
 /*!***************************************!*\
   !*** ./src/diagrams/class/classDb.js ***!
   \***************************************/
-/*! exports provided: parseDirective, addClass, lookUpDomId, clear, getClass, getClasses, getRelations, addRelation, addAnnotation, addMember, addMembers, cleanupLabel, setCssClass, setLink, setClickEvent, bindFunctions, lineType, relationType, default */
+/*! exports provided: parseDirective, addClass, lookUpDomId, clear, getPackage, getPackages, getClass, getClasses, getRelations, addRelation, addAnnotation, addMember, addMembers, cleanupLabel, setCssClass, setLink, setClickEvent, bindFunctions, lineType, relationType, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4569,6 +4570,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addClass", function() { return addClass; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lookUpDomId", function() { return lookUpDomId; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clear", function() { return clear; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPackage", function() { return getPackage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPackages", function() { return getPackages; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getClass", function() { return getClass; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getClasses", function() { return getClasses; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRelations", function() { return getRelations; });
@@ -4599,13 +4602,15 @@ __webpack_require__.r(__webpack_exports__);
 var MERMAID_DOM_ID_PREFIX = 'classid-';
 var relations = [];
 var classes = {};
+var packages = [];
 var classCounter = 0;
 var funs = [];
 var parseDirective = function parseDirective(statement, context, type) {
   _mermaidAPI__WEBPACK_IMPORTED_MODULE_5__["default"].parseDirective(this, statement, context, type);
 };
 
-var splitClassNameAndType = function splitClassNameAndType(id) {
+var parseClassName = function parseClassName(id) {
+  var packageName = '';
   var genericType = '';
   var className = id;
 
@@ -4615,8 +4620,16 @@ var splitClassNameAndType = function splitClassNameAndType(id) {
     genericType = split[1];
   }
 
+  if (className.indexOf('.') > 0) {
+    var _split = className.split('.');
+
+    packageName = _split[0];
+    className = _split[1];
+  }
+
   return {
     className: className,
+    packageName: packageName,
     type: genericType
   };
 };
@@ -4628,18 +4641,24 @@ var splitClassNameAndType = function splitClassNameAndType(id) {
 
 
 var addClass = function addClass(id) {
-  var classId = splitClassNameAndType(id); // Only add class if not exists
+  var classDef = parseClassName(id); // Only add class if it does not exist
 
-  if (typeof classes[classId.className] !== 'undefined') return;
-  classes[classId.className] = {
-    id: classId.className,
-    type: classId.type,
+  if (typeof classes[classDef.className] !== 'undefined') return;
+  classes[classDef.className] = {
+    id: classDef.className,
+    type: classDef.type,
+    packageName: classDef.packageName,
     cssClasses: [],
     methods: [],
     members: [],
     annotations: [],
-    domId: MERMAID_DOM_ID_PREFIX + classId.className + '-' + classCounter
+    domId: MERMAID_DOM_ID_PREFIX + classDef.className + '-' + classCounter
   };
+
+  if (typeof packages[classDef.packageName] === 'undefined') {
+    packages[classDef.packageName] = classDef.packageName;
+  }
+
   classCounter++;
 };
 /**
@@ -4659,9 +4678,16 @@ var lookUpDomId = function lookUpDomId(id) {
 };
 var clear = function clear() {
   relations = [];
+  packages = {};
   classes = {};
   funs = [];
   funs.push(setupToolTips);
+};
+var getPackage = function getPackage(id) {
+  return packages[id];
+};
+var getPackages = function getPackages() {
+  return packages;
 };
 var getClass = function getClass(id) {
   return classes[id];
@@ -4676,8 +4702,8 @@ var addRelation = function addRelation(relation) {
   _logger__WEBPACK_IMPORTED_MODULE_1__["logger"].debug('Adding relation: ' + JSON.stringify(relation));
   addClass(relation.id1);
   addClass(relation.id2);
-  relation.id1 = splitClassNameAndType(relation.id1).className;
-  relation.id2 = splitClassNameAndType(relation.id2).className;
+  relation.id1 = parseClassName(relation.id1).className;
+  relation.id2 = parseClassName(relation.id2).className;
   relations.push(relation);
 };
 /**
@@ -4689,7 +4715,7 @@ var addRelation = function addRelation(relation) {
  */
 
 var addAnnotation = function addAnnotation(className, annotation) {
-  var validatedClassName = splitClassNameAndType(className).className;
+  var validatedClassName = parseClassName(className).className;
   classes[validatedClassName].annotations.push(annotation);
 };
 /**
@@ -4703,7 +4729,7 @@ var addAnnotation = function addAnnotation(className, annotation) {
  */
 
 var addMember = function addMember(className, member) {
-  var validatedClassName = splitClassNameAndType(className).className;
+  var validatedClassName = parseClassName(className).className;
   var theClass = classes[validatedClassName];
 
   if (typeof member === 'string') {
@@ -4872,6 +4898,8 @@ funs.push(setupToolTips);
   addClass: addClass,
   bindFunctions: bindFunctions,
   clear: clear,
+  getPackage: getPackage,
+  getPackages: getPackages,
   getClass: getClass,
   getClasses: getClasses,
   addAnnotation: addAnnotation,
@@ -4999,7 +5027,7 @@ var addClasses = function addClasses(classes, g) {
     //   vertexNode = svgLabel;
     // }
 
-    var radious = 0;
+    var radius = 0;
     var _shape = ''; // Set the shape based parameters
 
     switch (vertex.type) {
@@ -5017,8 +5045,8 @@ var addClasses = function addClasses(classes, g) {
       shape: _shape,
       labelText: vertexText,
       classData: vertex,
-      rx: radious,
-      ry: radious,
+      rx: radius,
+      ry: radius,
       class: cssClassStr,
       style: styles.style,
       id: vertex.id,
@@ -5033,8 +5061,8 @@ var addClasses = function addClasses(classes, g) {
       labelStyle: styles.labelStyle,
       shape: _shape,
       labelText: vertexText,
-      rx: radious,
-      ry: radious,
+      rx: radius,
+      ry: radius,
       class: cssClassStr,
       style: styles.style,
       id: vertex.id,
@@ -5045,7 +5073,7 @@ var addClasses = function addClasses(classes, g) {
   });
 };
 /**
- * Add edges to graph based on parsed graph defninition
+ * Add edges to graph based on parsed graph definition
  * @param {Object} edges The edges to add to the graph
  * @param {Object} g The graph object
  */
@@ -5270,7 +5298,7 @@ var draw = function draw(text, id) {
   //   logger.info('Subgraph - ', subG);
   //   flowDb.addVertex(subG.id, subG.title, 'group', undefined, subG.classes);
   // }
-  // Fetch the verices/nodes and edges/links from the parsed graph definition
+  // Fetch the vertices/nodes and edges/links from the parsed graph definition
 
   var classes = _classDb__WEBPACK_IMPORTED_MODULE_4__["default"].getClasses();
   var relations = _classDb__WEBPACK_IMPORTED_MODULE_4__["default"].getRelations();
@@ -5619,12 +5647,12 @@ var draw = function draw(text, id) {
   }
 */
 var parser = (function(){
-var o=function(k,v,o,l){for(o=o||{},l=k.length;l--;o[k[l]]=v);return o},$V0=[1,7],$V1=[1,6],$V2=[1,14],$V3=[1,25],$V4=[1,28],$V5=[1,26],$V6=[1,27],$V7=[1,29],$V8=[1,30],$V9=[1,31],$Va=[1,33],$Vb=[1,34],$Vc=[1,35],$Vd=[10,19],$Ve=[1,47],$Vf=[1,48],$Vg=[1,49],$Vh=[1,50],$Vi=[1,51],$Vj=[1,52],$Vk=[10,19,25,32,33,41,44,45,46,47,48,49],$Vl=[10,19,23,25,32,33,37,41,44,45,46,47,48,49,66,67,68],$Vm=[10,13,17,19],$Vn=[41,66,67,68],$Vo=[41,48,49,66,67,68],$Vp=[41,44,45,46,47,66,67,68],$Vq=[10,19,25],$Vr=[1,81];
+var o=function(k,v,o,l){for(o=o||{},l=k.length;l--;o[k[l]]=v);return o},$V0=[1,7],$V1=[1,6],$V2=[1,14],$V3=[1,26],$V4=[1,29],$V5=[1,27],$V6=[1,28],$V7=[1,30],$V8=[1,31],$V9=[1,32],$Va=[1,33],$Vb=[1,35],$Vc=[1,36],$Vd=[1,37],$Ve=[1,38],$Vf=[10,19],$Vg=[1,50],$Vh=[1,51],$Vi=[1,52],$Vj=[1,53],$Vk=[1,54],$Vl=[1,55],$Vm=[10,19,26,34,35,43,46,47,48,49,50,51],$Vn=[10,19,24,26,34,35,39,43,46,47,48,49,50,51,69,70,71,72],$Vo=[10,13,17,19],$Vp=[43,69,70,71,72],$Vq=[43,50,51,69,70,71,72],$Vr=[43,46,47,48,49,69,70,71,72],$Vs=[10,19,26],$Vt=[1,87];
 var parser = {trace: function trace () { },
 yy: {},
-symbols_: {"error":2,"start":3,"mermaidDoc":4,"directive":5,"graphConfig":6,"openDirective":7,"typeDirective":8,"closeDirective":9,"NEWLINE":10,":":11,"argDirective":12,"open_directive":13,"type_directive":14,"arg_directive":15,"close_directive":16,"CLASS_DIAGRAM":17,"statements":18,"EOF":19,"statement":20,"className":21,"alphaNumToken":22,"GENERICTYPE":23,"relationStatement":24,"LABEL":25,"classStatement":26,"methodStatement":27,"annotationStatement":28,"clickStatement":29,"cssClassStatement":30,"CLASS":31,"STYLE_SEPARATOR":32,"STRUCT_START":33,"members":34,"STRUCT_STOP":35,"ANNOTATION_START":36,"ANNOTATION_END":37,"MEMBER":38,"SEPARATOR":39,"relation":40,"STR":41,"relationType":42,"lineType":43,"AGGREGATION":44,"EXTENSION":45,"COMPOSITION":46,"DEPENDENCY":47,"LINE":48,"DOTTED_LINE":49,"CALLBACK":50,"LINK":51,"CSSCLASS":52,"commentToken":53,"textToken":54,"graphCodeTokens":55,"textNoTagsToken":56,"TAGSTART":57,"TAGEND":58,"==":59,"--":60,"PCT":61,"DEFAULT":62,"SPACE":63,"MINUS":64,"keywords":65,"UNICODE_TEXT":66,"NUM":67,"ALPHA":68,"$accept":0,"$end":1},
-terminals_: {2:"error",10:"NEWLINE",11:":",13:"open_directive",14:"type_directive",15:"arg_directive",16:"close_directive",17:"CLASS_DIAGRAM",19:"EOF",23:"GENERICTYPE",25:"LABEL",31:"CLASS",32:"STYLE_SEPARATOR",33:"STRUCT_START",35:"STRUCT_STOP",36:"ANNOTATION_START",37:"ANNOTATION_END",38:"MEMBER",39:"SEPARATOR",41:"STR",44:"AGGREGATION",45:"EXTENSION",46:"COMPOSITION",47:"DEPENDENCY",48:"LINE",49:"DOTTED_LINE",50:"CALLBACK",51:"LINK",52:"CSSCLASS",55:"graphCodeTokens",57:"TAGSTART",58:"TAGEND",59:"==",60:"--",61:"PCT",62:"DEFAULT",63:"SPACE",64:"MINUS",65:"keywords",66:"UNICODE_TEXT",67:"NUM",68:"ALPHA"},
-productions_: [0,[3,1],[3,2],[4,1],[5,4],[5,6],[7,1],[8,1],[12,1],[9,1],[6,4],[18,1],[18,2],[18,3],[21,1],[21,2],[21,3],[21,2],[20,1],[20,2],[20,1],[20,1],[20,1],[20,1],[20,1],[20,1],[26,2],[26,4],[26,5],[26,7],[28,4],[34,1],[34,2],[27,1],[27,2],[27,1],[27,1],[24,3],[24,4],[24,4],[24,5],[40,3],[40,2],[40,2],[40,1],[42,1],[42,1],[42,1],[42,1],[43,1],[43,1],[29,3],[29,4],[29,3],[29,4],[30,3],[53,1],[53,1],[54,1],[54,1],[54,1],[54,1],[54,1],[54,1],[54,1],[56,1],[56,1],[56,1],[56,1],[22,1],[22,1],[22,1]],
+symbols_: {"error":2,"start":3,"mermaidDoc":4,"directive":5,"graphConfig":6,"openDirective":7,"typeDirective":8,"closeDirective":9,"NEWLINE":10,":":11,"argDirective":12,"open_directive":13,"type_directive":14,"arg_directive":15,"close_directive":16,"CLASS_DIAGRAM":17,"statements":18,"EOF":19,"statement":20,"packageName":21,"alphaNumToken":22,"className":23,"GENERICTYPE":24,"relationStatement":25,"LABEL":26,"classStatement":27,"methodStatement":28,"annotationStatement":29,"packageStatement":30,"clickStatement":31,"cssClassStatement":32,"CLASS":33,"STYLE_SEPARATOR":34,"STRUCT_START":35,"members":36,"STRUCT_STOP":37,"ANNOTATION_START":38,"ANNOTATION_END":39,"MEMBER":40,"SEPARATOR":41,"relation":42,"STR":43,"relationType":44,"lineType":45,"AGGREGATION":46,"EXTENSION":47,"COMPOSITION":48,"DEPENDENCY":49,"LINE":50,"DOTTED_LINE":51,"PACKAGE":52,"CALLBACK":53,"LINK":54,"CSSCLASS":55,"commentToken":56,"textToken":57,"graphCodeTokens":58,"textNoTagsToken":59,"TAGSTART":60,"TAGEND":61,"==":62,"--":63,"PCT":64,"DEFAULT":65,"SPACE":66,"MINUS":67,"keywords":68,"UNICODE_TEXT":69,"NUM":70,"ALPHA":71,"DOT":72,"$accept":0,"$end":1},
+terminals_: {2:"error",10:"NEWLINE",11:":",13:"open_directive",14:"type_directive",15:"arg_directive",16:"close_directive",17:"CLASS_DIAGRAM",19:"EOF",24:"GENERICTYPE",26:"LABEL",33:"CLASS",34:"STYLE_SEPARATOR",35:"STRUCT_START",37:"STRUCT_STOP",38:"ANNOTATION_START",39:"ANNOTATION_END",40:"MEMBER",41:"SEPARATOR",43:"STR",46:"AGGREGATION",47:"EXTENSION",48:"COMPOSITION",49:"DEPENDENCY",50:"LINE",51:"DOTTED_LINE",52:"PACKAGE",53:"CALLBACK",54:"LINK",55:"CSSCLASS",58:"graphCodeTokens",60:"TAGSTART",61:"TAGEND",62:"==",63:"--",64:"PCT",65:"DEFAULT",66:"SPACE",67:"MINUS",68:"keywords",69:"UNICODE_TEXT",70:"NUM",71:"ALPHA",72:"DOT"},
+productions_: [0,[3,1],[3,2],[4,1],[5,4],[5,6],[7,1],[8,1],[12,1],[9,1],[6,4],[18,1],[18,2],[18,3],[21,1],[23,1],[23,2],[23,3],[23,2],[20,1],[20,2],[20,1],[20,1],[20,1],[20,1],[20,1],[20,1],[20,1],[27,2],[27,4],[27,5],[27,7],[29,4],[36,1],[36,2],[28,1],[28,2],[28,1],[28,1],[25,3],[25,4],[25,4],[25,5],[42,3],[42,2],[42,2],[42,1],[44,1],[44,1],[44,1],[44,1],[45,1],[45,1],[30,3],[31,3],[31,4],[31,3],[31,4],[32,3],[56,1],[56,1],[57,1],[57,1],[57,1],[57,1],[57,1],[57,1],[57,1],[59,1],[59,1],[59,1],[59,1],[22,1],[22,1],[22,1],[22,1]],
 performAction: function anonymous(yytext, yyleng, yylineno, yy, yystate /* action[1] */, $$ /* vstack */, _$ /* lstack */) {
 /* this == yyval */
 
@@ -5642,118 +5670,121 @@ break;
 case 9:
  yy.parseDirective('}%%', 'close_directive', 'class'); 
 break;
-case 14:
+case 14: case 15:
  this.$=$$[$0]; 
 break;
-case 15:
+case 16:
  this.$=$$[$0-1]+$$[$0]; 
 break;
-case 16:
+case 17:
  this.$=$$[$0-2]+'~'+$$[$0-1]+$$[$0]; 
 break;
-case 17:
+case 18:
  this.$=$$[$0-1]+'~'+$$[$0]; 
 break;
-case 18:
+case 19:
  yy.addRelation($$[$0]); 
 break;
-case 19:
- $$[$0-1].title =  yy.cleanupLabel($$[$0]); yy.addRelation($$[$0-1]);        
-break;
-case 26:
-yy.addClass($$[$0]);
-break;
-case 27:
-yy.addClass($$[$0-2]);yy.setCssClass($$[$0-2], $$[$0]);
+case 20:
+ $$[$0-1].title =  yy.cleanupLabel($$[$0]); yy.addRelation($$[$0-1]); 
 break;
 case 28:
-/*console.log($$[$0-3],JSON.stringify($$[$0-1]));*/yy.addClass($$[$0-3]);yy.addMembers($$[$0-3],$$[$0-1]);
+yy.addClass($$[$0]);
 break;
 case 29:
-yy.addClass($$[$0-5]);yy.setCssClass($$[$0-5], $$[$0-3]);yy.addMembers($$[$0-5],$$[$0-1]);
+yy.addClass($$[$0-2]);yy.setCssClass($$[$0-2], $$[$0]);
 break;
 case 30:
- yy.addAnnotation($$[$0],$$[$0-2]); 
+/*console.log($$[$0-3],JSON.stringify($$[$0-1]));*/yy.addClass($$[$0-3]);yy.addMembers($$[$0-3],$$[$0-1]);
 break;
 case 31:
- this.$ = [$$[$0]]; 
+yy.addClass($$[$0-5]);yy.setCssClass($$[$0-5], $$[$0-3]);yy.addMembers($$[$0-5],$$[$0-1]);
 break;
 case 32:
- $$[$0].push($$[$0-1]);this.$=$$[$0];
+ yy.addAnnotation($$[$0],$$[$0-2]); 
 break;
 case 33:
-/*console.log('Rel found',$$[$0]);*/
+ this.$ = [$$[$0]]; 
 break;
 case 34:
-yy.addMember($$[$0-1],yy.cleanupLabel($$[$0]));
+ $$[$0].push($$[$0-1]);this.$=$$[$0];
 break;
 case 35:
-/*console.warn('Member',$$[$0]);*/
+/*console.log('Rel found',$$[$0]);*/
 break;
 case 36:
-/*console.log('sep found',$$[$0]);*/
+yy.addMember($$[$0-1],yy.cleanupLabel($$[$0]));
 break;
 case 37:
- this.$ = {'id1':$$[$0-2],'id2':$$[$0], relation:$$[$0-1], relationTitle1:'none', relationTitle2:'none'}; 
+/*console.warn('Member',$$[$0]);*/
 break;
 case 38:
- this.$ = {id1:$$[$0-3], id2:$$[$0], relation:$$[$0-1], relationTitle1:$$[$0-2], relationTitle2:'none'}
+/*console.log('sep found',$$[$0]);*/
 break;
 case 39:
- this.$ = {id1:$$[$0-3], id2:$$[$0], relation:$$[$0-2], relationTitle1:'none', relationTitle2:$$[$0-1]}; 
+ this.$ = {'id1':$$[$0-2],'id2':$$[$0], relation:$$[$0-1], relationTitle1:'none', relationTitle2:'none'}; 
 break;
 case 40:
- this.$ = {id1:$$[$0-4], id2:$$[$0], relation:$$[$0-2], relationTitle1:$$[$0-3], relationTitle2:$$[$0-1]} 
+ this.$ = {id1:$$[$0-3], id2:$$[$0], relation:$$[$0-1], relationTitle1:$$[$0-2], relationTitle2:'none'}
 break;
 case 41:
- this.$={type1:$$[$0-2],type2:$$[$0],lineType:$$[$0-1]}; 
+ this.$ = {id1:$$[$0-3], id2:$$[$0], relation:$$[$0-2], relationTitle1:'none', relationTitle2:$$[$0-1]}; 
 break;
 case 42:
- this.$={type1:'none',type2:$$[$0],lineType:$$[$0-1]}; 
+ this.$ = {id1:$$[$0-4], id2:$$[$0], relation:$$[$0-2], relationTitle1:$$[$0-3], relationTitle2:$$[$0-1]} 
 break;
 case 43:
- this.$={type1:$$[$0-1],type2:'none',lineType:$$[$0]}; 
+ this.$={type1:$$[$0-2],type2:$$[$0],lineType:$$[$0-1]}; 
 break;
 case 44:
- this.$={type1:'none',type2:'none',lineType:$$[$0]}; 
+ this.$={type1:'none',type2:$$[$0],lineType:$$[$0-1]}; 
 break;
 case 45:
- this.$=yy.relationType.AGGREGATION;
+ this.$={type1:$$[$0-1],type2:'none',lineType:$$[$0]}; 
 break;
 case 46:
- this.$=yy.relationType.EXTENSION;
+ this.$={type1:'none',type2:'none',lineType:$$[$0]}; 
 break;
 case 47:
- this.$=yy.relationType.COMPOSITION;
+ this.$=yy.relationType.AGGREGATION;
 break;
 case 48:
- this.$=yy.relationType.DEPENDENCY;
+ this.$=yy.relationType.EXTENSION;
 break;
 case 49:
-this.$=yy.lineType.LINE;
+ this.$=yy.relationType.COMPOSITION;
 break;
 case 50:
-this.$=yy.lineType.DOTTED_LINE;
+ this.$=yy.relationType.DEPENDENCY;
 break;
 case 51:
-this.$ = $$[$0-2];yy.setClickEvent($$[$0-1], $$[$0], undefined);
+this.$=yy.lineType.LINE;
 break;
 case 52:
-this.$ = $$[$0-3];yy.setClickEvent($$[$0-2], $$[$0-1], $$[$0]);
+this.$=yy.lineType.DOTTED_LINE;
 break;
 case 53:
-this.$ = $$[$0-2];yy.setLink($$[$0-1], $$[$0], undefined);
+ yy.addPackage($$[$0-1], $$[$0]); 
 break;
 case 54:
-this.$ = $$[$0-3];yy.setLink($$[$0-2], $$[$0-1], $$[$0]);
+this.$ = $$[$0-2];yy.setClickEvent($$[$0-1], $$[$0], undefined);
 break;
 case 55:
+this.$ = $$[$0-3];yy.setClickEvent($$[$0-2], $$[$0-1], $$[$0]);
+break;
+case 56:
+this.$ = $$[$0-2];yy.setLink($$[$0-1], $$[$0], undefined);
+break;
+case 57:
+this.$ = $$[$0-3];yy.setLink($$[$0-2], $$[$0-1], $$[$0]);
+break;
+case 58:
 yy.setCssClass($$[$0-1], $$[$0]);
 break;
 }
 },
-table: [{3:1,4:2,5:3,6:4,7:5,13:$V0,17:$V1},{1:[3]},{1:[2,1]},{3:8,4:2,5:3,6:4,7:5,13:$V0,17:$V1},{1:[2,3]},{8:9,14:[1,10]},{10:[1,11]},{14:[2,6]},{1:[2,2]},{9:12,11:[1,13],16:$V2},o([11,16],[2,7]),{5:23,7:5,13:$V0,18:15,20:16,21:24,22:32,24:17,26:18,27:19,28:20,29:21,30:22,31:$V3,36:$V4,38:$V5,39:$V6,50:$V7,51:$V8,52:$V9,66:$Va,67:$Vb,68:$Vc},{10:[1,36]},{12:37,15:[1,38]},{10:[2,9]},{19:[1,39]},{10:[1,40],19:[2,11]},o($Vd,[2,18],{25:[1,41]}),o($Vd,[2,20]),o($Vd,[2,21]),o($Vd,[2,22]),o($Vd,[2,23]),o($Vd,[2,24]),o($Vd,[2,25]),o($Vd,[2,33],{40:42,42:45,43:46,25:[1,44],41:[1,43],44:$Ve,45:$Vf,46:$Vg,47:$Vh,48:$Vi,49:$Vj}),{21:53,22:32,66:$Va,67:$Vb,68:$Vc},o($Vd,[2,35]),o($Vd,[2,36]),{22:54,66:$Va,67:$Vb,68:$Vc},{21:55,22:32,66:$Va,67:$Vb,68:$Vc},{21:56,22:32,66:$Va,67:$Vb,68:$Vc},{41:[1,57]},o($Vk,[2,14],{22:32,21:58,23:[1,59],66:$Va,67:$Vb,68:$Vc}),o($Vl,[2,69]),o($Vl,[2,70]),o($Vl,[2,71]),o($Vm,[2,4]),{9:60,16:$V2},{16:[2,8]},{1:[2,10]},{5:23,7:5,13:$V0,18:61,19:[2,12],20:16,21:24,22:32,24:17,26:18,27:19,28:20,29:21,30:22,31:$V3,36:$V4,38:$V5,39:$V6,50:$V7,51:$V8,52:$V9,66:$Va,67:$Vb,68:$Vc},o($Vd,[2,19]),{21:62,22:32,41:[1,63],66:$Va,67:$Vb,68:$Vc},{40:64,42:45,43:46,44:$Ve,45:$Vf,46:$Vg,47:$Vh,48:$Vi,49:$Vj},o($Vd,[2,34]),{43:65,48:$Vi,49:$Vj},o($Vn,[2,44],{42:66,44:$Ve,45:$Vf,46:$Vg,47:$Vh}),o($Vo,[2,45]),o($Vo,[2,46]),o($Vo,[2,47]),o($Vo,[2,48]),o($Vp,[2,49]),o($Vp,[2,50]),o($Vd,[2,26],{32:[1,67],33:[1,68]}),{37:[1,69]},{41:[1,70]},{41:[1,71]},{22:72,66:$Va,67:$Vb,68:$Vc},o($Vk,[2,15]),o($Vk,[2,17],{22:32,21:73,66:$Va,67:$Vb,68:$Vc}),{10:[1,74]},{19:[2,13]},o($Vq,[2,37]),{21:75,22:32,66:$Va,67:$Vb,68:$Vc},{21:76,22:32,41:[1,77],66:$Va,67:$Vb,68:$Vc},o($Vn,[2,43],{42:78,44:$Ve,45:$Vf,46:$Vg,47:$Vh}),o($Vn,[2,42]),{22:79,66:$Va,67:$Vb,68:$Vc},{34:80,38:$Vr},{21:82,22:32,66:$Va,67:$Vb,68:$Vc},o($Vd,[2,51],{41:[1,83]}),o($Vd,[2,53],{41:[1,84]}),o($Vd,[2,55]),o($Vk,[2,16]),o($Vm,[2,5]),o($Vq,[2,39]),o($Vq,[2,38]),{21:85,22:32,66:$Va,67:$Vb,68:$Vc},o($Vn,[2,41]),o($Vd,[2,27],{33:[1,86]}),{35:[1,87]},{34:88,35:[2,31],38:$Vr},o($Vd,[2,30]),o($Vd,[2,52]),o($Vd,[2,54]),o($Vq,[2,40]),{34:89,38:$Vr},o($Vd,[2,28]),{35:[2,32]},{35:[1,90]},o($Vd,[2,29])],
-defaultActions: {2:[2,1],4:[2,3],7:[2,6],8:[2,2],14:[2,9],38:[2,8],39:[2,10],61:[2,13],88:[2,32]},
+table: [{3:1,4:2,5:3,6:4,7:5,13:$V0,17:$V1},{1:[3]},{1:[2,1]},{3:8,4:2,5:3,6:4,7:5,13:$V0,17:$V1},{1:[2,3]},{8:9,14:[1,10]},{10:[1,11]},{14:[2,6]},{1:[2,2]},{9:12,11:[1,13],16:$V2},o([11,16],[2,7]),{5:24,7:5,13:$V0,18:15,20:16,22:34,23:25,25:17,27:18,28:19,29:20,30:21,31:22,32:23,33:$V3,38:$V4,40:$V5,41:$V6,52:$V7,53:$V8,54:$V9,55:$Va,69:$Vb,70:$Vc,71:$Vd,72:$Ve},{10:[1,39]},{12:40,15:[1,41]},{10:[2,9]},{19:[1,42]},{10:[1,43],19:[2,11]},o($Vf,[2,19],{26:[1,44]}),o($Vf,[2,21]),o($Vf,[2,22]),o($Vf,[2,23]),o($Vf,[2,24]),o($Vf,[2,25]),o($Vf,[2,26]),o($Vf,[2,27]),o($Vf,[2,35],{42:45,44:48,45:49,26:[1,47],43:[1,46],46:$Vg,47:$Vh,48:$Vi,49:$Vj,50:$Vk,51:$Vl}),{22:34,23:56,69:$Vb,70:$Vc,71:$Vd,72:$Ve},o($Vf,[2,37]),o($Vf,[2,38]),{22:57,69:$Vb,70:$Vc,71:$Vd,72:$Ve},{21:58,22:59,69:$Vb,70:$Vc,71:$Vd,72:$Ve},{22:34,23:60,69:$Vb,70:$Vc,71:$Vd,72:$Ve},{22:34,23:61,69:$Vb,70:$Vc,71:$Vd,72:$Ve},{43:[1,62]},o($Vm,[2,15],{22:34,23:63,24:[1,64],69:$Vb,70:$Vc,71:$Vd,72:$Ve}),o($Vn,[2,72]),o($Vn,[2,73]),o($Vn,[2,74]),o($Vn,[2,75]),o($Vo,[2,4]),{9:65,16:$V2},{16:[2,8]},{1:[2,10]},{5:24,7:5,13:$V0,18:66,19:[2,12],20:16,22:34,23:25,25:17,27:18,28:19,29:20,30:21,31:22,32:23,33:$V3,38:$V4,40:$V5,41:$V6,52:$V7,53:$V8,54:$V9,55:$Va,69:$Vb,70:$Vc,71:$Vd,72:$Ve},o($Vf,[2,20]),{22:34,23:67,43:[1,68],69:$Vb,70:$Vc,71:$Vd,72:$Ve},{42:69,44:48,45:49,46:$Vg,47:$Vh,48:$Vi,49:$Vj,50:$Vk,51:$Vl},o($Vf,[2,36]),{45:70,50:$Vk,51:$Vl},o($Vp,[2,46],{44:71,46:$Vg,47:$Vh,48:$Vi,49:$Vj}),o($Vq,[2,47]),o($Vq,[2,48]),o($Vq,[2,49]),o($Vq,[2,50]),o($Vr,[2,51]),o($Vr,[2,52]),o($Vf,[2,28],{34:[1,72],35:[1,73]}),{39:[1,74]},{22:34,23:75,69:$Vb,70:$Vc,71:$Vd,72:$Ve},o([69,70,71,72],[2,14]),{43:[1,76]},{43:[1,77]},{22:78,69:$Vb,70:$Vc,71:$Vd,72:$Ve},o($Vm,[2,16]),o($Vm,[2,18],{22:34,23:79,69:$Vb,70:$Vc,71:$Vd,72:$Ve}),{10:[1,80]},{19:[2,13]},o($Vs,[2,39]),{22:34,23:81,69:$Vb,70:$Vc,71:$Vd,72:$Ve},{22:34,23:82,43:[1,83],69:$Vb,70:$Vc,71:$Vd,72:$Ve},o($Vp,[2,45],{44:84,46:$Vg,47:$Vh,48:$Vi,49:$Vj}),o($Vp,[2,44]),{22:85,69:$Vb,70:$Vc,71:$Vd,72:$Ve},{36:86,40:$Vt},{22:34,23:88,69:$Vb,70:$Vc,71:$Vd,72:$Ve},o($Vf,[2,53]),o($Vf,[2,54],{43:[1,89]}),o($Vf,[2,56],{43:[1,90]}),o($Vf,[2,58]),o($Vm,[2,17]),o($Vo,[2,5]),o($Vs,[2,41]),o($Vs,[2,40]),{22:34,23:91,69:$Vb,70:$Vc,71:$Vd,72:$Ve},o($Vp,[2,43]),o($Vf,[2,29],{35:[1,92]}),{37:[1,93]},{36:94,37:[2,33],40:$Vt},o($Vf,[2,32]),o($Vf,[2,55]),o($Vf,[2,57]),o($Vs,[2,42]),{36:95,40:$Vt},o($Vf,[2,30]),{37:[2,34]},{37:[1,96]},o($Vf,[2,31])],
+defaultActions: {2:[2,1],4:[2,3],7:[2,6],8:[2,2],14:[2,9],41:[2,8],42:[2,10],66:[2,13],94:[2,34]},
 parseError: function parseError (str, hash) {
     if (hash.recoverable) {
         this.trace(str);
@@ -6254,90 +6285,92 @@ case 9:return 17;
 break;
 case 10:return 17;
 break;
-case 11: this.begin("struct"); /*console.log('Starting struct');*/ return 33;
+case 11: this.begin("struct"); /*console.log('Starting struct');*/ return 35;
 break;
 case 12:return "EOF_IN_STRUCT";
 break;
 case 13:return "OPEN_IN_STRUCT";
 break;
-case 14: /*console.log('Ending struct');*/this.popState(); return 35;
+case 14: /*console.log('Ending struct');*/this.popState(); return 37;
 break;
 case 15:/* nothing */
 break;
 case 16: /*console.log('lex-member: ' + yy_.yytext);*/  return "MEMBER";
 break;
-case 17:return 31;
+case 17:return 52;
 break;
-case 18:return 52;
+case 18:return 33;
 break;
-case 19:return 50;
+case 19:return 55;
 break;
-case 20:return 51;
+case 20:return 53;
 break;
-case 21:return 36;
+case 21:return 54;
 break;
-case 22:return 37;
+case 22:return 38;
 break;
-case 23:this.begin("generic");
+case 23:return 39;
 break;
-case 24:this.popState();
+case 24:this.begin("generic");
 break;
-case 25:return "GENERICTYPE";
+case 25:this.popState();
 break;
-case 26:this.begin("string");
+case 26:return "GENERICTYPE";
 break;
-case 27:this.popState();
+case 27:this.begin("string");
 break;
-case 28:return "STR";
+case 28:this.popState();
 break;
-case 29:return 45;
+case 29:return "STR";
 break;
-case 30:return 45;
+case 30:return 47;
 break;
 case 31:return 47;
 break;
-case 32:return 47;
+case 32:return 49;
 break;
-case 33:return 46;
+case 33:return 49;
 break;
-case 34:return 44;
+case 34:return 48;
 break;
-case 35:return 48;
+case 35:return 46;
 break;
-case 36:return 49;
+case 36:return 50;
 break;
-case 37:return 25;
+case 37:return 51;
 break;
-case 38:return 32;
+case 38:return 26;
 break;
-case 39:return 64;
+case 39:return 34;
 break;
-case 40:return 'DOT';
+case 40:return 67;
 break;
-case 41:return 'PLUS';
+case 41:return 72;
 break;
-case 42:return 61;
+case 42:return 'PLUS';
 break;
-case 43:return 'EQUALS';
+case 43:return 64;
 break;
 case 44:return 'EQUALS';
 break;
-case 45:return 68;
+case 45:return 'EQUALS';
 break;
-case 46:return 'PUNCTUATION';
+case 46:return 71;
 break;
-case 47:return 67;
+case 47:return 'PUNCTUATION';
 break;
-case 48:return 66;
+case 48:return 70;
 break;
-case 49:return 63;
+case 49:return 69;
 break;
-case 50:return 19;
+case 50:return 66;
+break;
+case 51:return 19;
 break;
 }
 },
-rules: [/^(?:%%\{)/,/^(?:((?:(?!\}%%)[^:.])*))/,/^(?::)/,/^(?:\}%%)/,/^(?:((?:(?!\}%%).|\n)*))/,/^(?:%%(?!\{)*[^\n]*(\r?\n?)+)/,/^(?:%%[^\n]*(\r?\n)*)/,/^(?:(\r?\n)+)/,/^(?:\s+)/,/^(?:classDiagram-v2\b)/,/^(?:classDiagram\b)/,/^(?:[{])/,/^(?:$)/,/^(?:[{])/,/^(?:[}])/,/^(?:[\n])/,/^(?:[^{}\n]*)/,/^(?:class\b)/,/^(?:cssClass\b)/,/^(?:callback\b)/,/^(?:link\b)/,/^(?:<<)/,/^(?:>>)/,/^(?:[~])/,/^(?:[~])/,/^(?:[^~]*)/,/^(?:["])/,/^(?:["])/,/^(?:[^"]*)/,/^(?:\s*<\|)/,/^(?:\s*\|>)/,/^(?:\s*>)/,/^(?:\s*<)/,/^(?:\s*\*)/,/^(?:\s*o\b)/,/^(?:--)/,/^(?:\.\.)/,/^(?::{1}[^:\n;]+)/,/^(?::{3})/,/^(?:-)/,/^(?:\.)/,/^(?:\+)/,/^(?:%)/,/^(?:=)/,/^(?:=)/,/^(?:\w+)/,/^(?:[!"#$%&'*+,-.`?\\/])/,/^(?:[0-9]+)/,/^(?:[\u00AA\u00B5\u00BA\u00C0-\u00D6\u00D8-\u00F6]|[\u00F8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0370-\u0374\u0376\u0377]|[\u037A-\u037D\u0386\u0388-\u038A\u038C\u038E-\u03A1\u03A3-\u03F5]|[\u03F7-\u0481\u048A-\u0527\u0531-\u0556\u0559\u0561-\u0587\u05D0-\u05EA]|[\u05F0-\u05F2\u0620-\u064A\u066E\u066F\u0671-\u06D3\u06D5\u06E5\u06E6\u06EE]|[\u06EF\u06FA-\u06FC\u06FF\u0710\u0712-\u072F\u074D-\u07A5\u07B1\u07CA-\u07EA]|[\u07F4\u07F5\u07FA\u0800-\u0815\u081A\u0824\u0828\u0840-\u0858\u08A0]|[\u08A2-\u08AC\u0904-\u0939\u093D\u0950\u0958-\u0961\u0971-\u0977]|[\u0979-\u097F\u0985-\u098C\u098F\u0990\u0993-\u09A8\u09AA-\u09B0\u09B2]|[\u09B6-\u09B9\u09BD\u09CE\u09DC\u09DD\u09DF-\u09E1\u09F0\u09F1\u0A05-\u0A0A]|[\u0A0F\u0A10\u0A13-\u0A28\u0A2A-\u0A30\u0A32\u0A33\u0A35\u0A36\u0A38\u0A39]|[\u0A59-\u0A5C\u0A5E\u0A72-\u0A74\u0A85-\u0A8D\u0A8F-\u0A91\u0A93-\u0AA8]|[\u0AAA-\u0AB0\u0AB2\u0AB3\u0AB5-\u0AB9\u0ABD\u0AD0\u0AE0\u0AE1\u0B05-\u0B0C]|[\u0B0F\u0B10\u0B13-\u0B28\u0B2A-\u0B30\u0B32\u0B33\u0B35-\u0B39\u0B3D\u0B5C]|[\u0B5D\u0B5F-\u0B61\u0B71\u0B83\u0B85-\u0B8A\u0B8E-\u0B90\u0B92-\u0B95\u0B99]|[\u0B9A\u0B9C\u0B9E\u0B9F\u0BA3\u0BA4\u0BA8-\u0BAA\u0BAE-\u0BB9\u0BD0]|[\u0C05-\u0C0C\u0C0E-\u0C10\u0C12-\u0C28\u0C2A-\u0C33\u0C35-\u0C39\u0C3D]|[\u0C58\u0C59\u0C60\u0C61\u0C85-\u0C8C\u0C8E-\u0C90\u0C92-\u0CA8\u0CAA-\u0CB3]|[\u0CB5-\u0CB9\u0CBD\u0CDE\u0CE0\u0CE1\u0CF1\u0CF2\u0D05-\u0D0C\u0D0E-\u0D10]|[\u0D12-\u0D3A\u0D3D\u0D4E\u0D60\u0D61\u0D7A-\u0D7F\u0D85-\u0D96\u0D9A-\u0DB1]|[\u0DB3-\u0DBB\u0DBD\u0DC0-\u0DC6\u0E01-\u0E30\u0E32\u0E33\u0E40-\u0E46\u0E81]|[\u0E82\u0E84\u0E87\u0E88\u0E8A\u0E8D\u0E94-\u0E97\u0E99-\u0E9F\u0EA1-\u0EA3]|[\u0EA5\u0EA7\u0EAA\u0EAB\u0EAD-\u0EB0\u0EB2\u0EB3\u0EBD\u0EC0-\u0EC4\u0EC6]|[\u0EDC-\u0EDF\u0F00\u0F40-\u0F47\u0F49-\u0F6C\u0F88-\u0F8C\u1000-\u102A]|[\u103F\u1050-\u1055\u105A-\u105D\u1061\u1065\u1066\u106E-\u1070\u1075-\u1081]|[\u108E\u10A0-\u10C5\u10C7\u10CD\u10D0-\u10FA\u10FC-\u1248\u124A-\u124D]|[\u1250-\u1256\u1258\u125A-\u125D\u1260-\u1288\u128A-\u128D\u1290-\u12B0]|[\u12B2-\u12B5\u12B8-\u12BE\u12C0\u12C2-\u12C5\u12C8-\u12D6\u12D8-\u1310]|[\u1312-\u1315\u1318-\u135A\u1380-\u138F\u13A0-\u13F4\u1401-\u166C]|[\u166F-\u167F\u1681-\u169A\u16A0-\u16EA\u1700-\u170C\u170E-\u1711]|[\u1720-\u1731\u1740-\u1751\u1760-\u176C\u176E-\u1770\u1780-\u17B3\u17D7]|[\u17DC\u1820-\u1877\u1880-\u18A8\u18AA\u18B0-\u18F5\u1900-\u191C]|[\u1950-\u196D\u1970-\u1974\u1980-\u19AB\u19C1-\u19C7\u1A00-\u1A16]|[\u1A20-\u1A54\u1AA7\u1B05-\u1B33\u1B45-\u1B4B\u1B83-\u1BA0\u1BAE\u1BAF]|[\u1BBA-\u1BE5\u1C00-\u1C23\u1C4D-\u1C4F\u1C5A-\u1C7D\u1CE9-\u1CEC]|[\u1CEE-\u1CF1\u1CF5\u1CF6\u1D00-\u1DBF\u1E00-\u1F15\u1F18-\u1F1D]|[\u1F20-\u1F45\u1F48-\u1F4D\u1F50-\u1F57\u1F59\u1F5B\u1F5D\u1F5F-\u1F7D]|[\u1F80-\u1FB4\u1FB6-\u1FBC\u1FBE\u1FC2-\u1FC4\u1FC6-\u1FCC\u1FD0-\u1FD3]|[\u1FD6-\u1FDB\u1FE0-\u1FEC\u1FF2-\u1FF4\u1FF6-\u1FFC\u2071\u207F]|[\u2090-\u209C\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128]|[\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2183\u2184]|[\u2C00-\u2C2E\u2C30-\u2C5E\u2C60-\u2CE4\u2CEB-\u2CEE\u2CF2\u2CF3]|[\u2D00-\u2D25\u2D27\u2D2D\u2D30-\u2D67\u2D6F\u2D80-\u2D96\u2DA0-\u2DA6]|[\u2DA8-\u2DAE\u2DB0-\u2DB6\u2DB8-\u2DBE\u2DC0-\u2DC6\u2DC8-\u2DCE]|[\u2DD0-\u2DD6\u2DD8-\u2DDE\u2E2F\u3005\u3006\u3031-\u3035\u303B\u303C]|[\u3041-\u3096\u309D-\u309F\u30A1-\u30FA\u30FC-\u30FF\u3105-\u312D]|[\u3131-\u318E\u31A0-\u31BA\u31F0-\u31FF\u3400-\u4DB5\u4E00-\u9FCC]|[\uA000-\uA48C\uA4D0-\uA4FD\uA500-\uA60C\uA610-\uA61F\uA62A\uA62B]|[\uA640-\uA66E\uA67F-\uA697\uA6A0-\uA6E5\uA717-\uA71F\uA722-\uA788]|[\uA78B-\uA78E\uA790-\uA793\uA7A0-\uA7AA\uA7F8-\uA801\uA803-\uA805]|[\uA807-\uA80A\uA80C-\uA822\uA840-\uA873\uA882-\uA8B3\uA8F2-\uA8F7\uA8FB]|[\uA90A-\uA925\uA930-\uA946\uA960-\uA97C\uA984-\uA9B2\uA9CF\uAA00-\uAA28]|[\uAA40-\uAA42\uAA44-\uAA4B\uAA60-\uAA76\uAA7A\uAA80-\uAAAF\uAAB1\uAAB5]|[\uAAB6\uAAB9-\uAABD\uAAC0\uAAC2\uAADB-\uAADD\uAAE0-\uAAEA\uAAF2-\uAAF4]|[\uAB01-\uAB06\uAB09-\uAB0E\uAB11-\uAB16\uAB20-\uAB26\uAB28-\uAB2E]|[\uABC0-\uABE2\uAC00-\uD7A3\uD7B0-\uD7C6\uD7CB-\uD7FB\uF900-\uFA6D]|[\uFA70-\uFAD9\uFB00-\uFB06\uFB13-\uFB17\uFB1D\uFB1F-\uFB28\uFB2A-\uFB36]|[\uFB38-\uFB3C\uFB3E\uFB40\uFB41\uFB43\uFB44\uFB46-\uFBB1\uFBD3-\uFD3D]|[\uFD50-\uFD8F\uFD92-\uFDC7\uFDF0-\uFDFB\uFE70-\uFE74\uFE76-\uFEFC]|[\uFF21-\uFF3A\uFF41-\uFF5A\uFF66-\uFFBE\uFFC2-\uFFC7\uFFCA-\uFFCF]|[\uFFD2-\uFFD7\uFFDA-\uFFDC])/,/^(?:\s)/,/^(?:$)/],
-conditions: {"string":{"rules":[27,28],"inclusive":false},"generic":{"rules":[24,25],"inclusive":false},"struct":{"rules":[12,13,14,15,16],"inclusive":false},"open_directive":{"rules":[1],"inclusive":false},"type_directive":{"rules":[2,3],"inclusive":false},"arg_directive":{"rules":[3,4],"inclusive":false},"INITIAL":{"rules":[0,5,6,7,8,9,10,11,17,18,19,20,21,22,23,26,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50],"inclusive":true}}
+rules: [/^(?:%%\{)/,/^(?:((?:(?!\}%%)[^:.])*))/,/^(?::)/,/^(?:\}%%)/,/^(?:((?:(?!\}%%).|\n)*))/,/^(?:%%(?!\{)*[^\n]*(\r?\n?)+)/,/^(?:%%[^\n]*(\r?\n)*)/,/^(?:(\r?\n)+)/,/^(?:\s+)/,/^(?:classDiagram-v2\b)/,/^(?:classDiagram\b)/,/^(?:[{])/,/^(?:$)/,/^(?:[{])/,/^(?:[}])/,/^(?:[\n])/,/^(?:[^{}\n]*)/,/^(?:package\b)/,/^(?:class\b)/,/^(?:cssClass\b)/,/^(?:callback\b)/,/^(?:link\b)/,/^(?:<<)/,/^(?:>>)/,/^(?:[~])/,/^(?:[~])/,/^(?:[^~]*)/,/^(?:["])/,/^(?:["])/,/^(?:[^"]*)/,/^(?:\s*<\|)/,/^(?:\s*\|>)/,/^(?:\s*>)/,/^(?:\s*<)/,/^(?:\s*\*)/,/^(?:\s*o\b)/,/^(?:--)/,/^(?:\.\.)/,/^(?::{1}[^:\n;]+)/,/^(?::{3})/,/^(?:-)/,/^(?:\.)/,/^(?:\+)/,/^(?:%)/,/^(?:=)/,/^(?:=)/,/^(?:\w+)/,/^(?:[!"#$%&'*+,-.`?\\/])/,/^(?:[0-9]+)/,/^(?:[\u00AA\u00B5\u00BA\u00C0-\u00D6\u00D8-\u00F6]|[\u00F8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0370-\u0374\u0376\u0377]|[\u037A-\u037D\u0386\u0388-\u038A\u038C\u038E-\u03A1\u03A3-\u03F5]|[\u03F7-\u0481\u048A-\u0527\u0531-\u0556\u0559\u0561-\u0587\u05D0-\u05EA]|[\u05F0-\u05F2\u0620-\u064A\u066E\u066F\u0671-\u06D3\u06D5\u06E5\u06E6\u06EE]|[\u06EF\u06FA-\u06FC\u06FF\u0710\u0712-\u072F\u074D-\u07A5\u07B1\u07CA-\u07EA]|[\u07F4\u07F5\u07FA\u0800-\u0815\u081A\u0824\u0828\u0840-\u0858\u08A0]|[\u08A2-\u08AC\u0904-\u0939\u093D\u0950\u0958-\u0961\u0971-\u0977]|[\u0979-\u097F\u0985-\u098C\u098F\u0990\u0993-\u09A8\u09AA-\u09B0\u09B2]|[\u09B6-\u09B9\u09BD\u09CE\u09DC\u09DD\u09DF-\u09E1\u09F0\u09F1\u0A05-\u0A0A]|[\u0A0F\u0A10\u0A13-\u0A28\u0A2A-\u0A30\u0A32\u0A33\u0A35\u0A36\u0A38\u0A39]|[\u0A59-\u0A5C\u0A5E\u0A72-\u0A74\u0A85-\u0A8D\u0A8F-\u0A91\u0A93-\u0AA8]|[\u0AAA-\u0AB0\u0AB2\u0AB3\u0AB5-\u0AB9\u0ABD\u0AD0\u0AE0\u0AE1\u0B05-\u0B0C]|[\u0B0F\u0B10\u0B13-\u0B28\u0B2A-\u0B30\u0B32\u0B33\u0B35-\u0B39\u0B3D\u0B5C]|[\u0B5D\u0B5F-\u0B61\u0B71\u0B83\u0B85-\u0B8A\u0B8E-\u0B90\u0B92-\u0B95\u0B99]|[\u0B9A\u0B9C\u0B9E\u0B9F\u0BA3\u0BA4\u0BA8-\u0BAA\u0BAE-\u0BB9\u0BD0]|[\u0C05-\u0C0C\u0C0E-\u0C10\u0C12-\u0C28\u0C2A-\u0C33\u0C35-\u0C39\u0C3D]|[\u0C58\u0C59\u0C60\u0C61\u0C85-\u0C8C\u0C8E-\u0C90\u0C92-\u0CA8\u0CAA-\u0CB3]|[\u0CB5-\u0CB9\u0CBD\u0CDE\u0CE0\u0CE1\u0CF1\u0CF2\u0D05-\u0D0C\u0D0E-\u0D10]|[\u0D12-\u0D3A\u0D3D\u0D4E\u0D60\u0D61\u0D7A-\u0D7F\u0D85-\u0D96\u0D9A-\u0DB1]|[\u0DB3-\u0DBB\u0DBD\u0DC0-\u0DC6\u0E01-\u0E30\u0E32\u0E33\u0E40-\u0E46\u0E81]|[\u0E82\u0E84\u0E87\u0E88\u0E8A\u0E8D\u0E94-\u0E97\u0E99-\u0E9F\u0EA1-\u0EA3]|[\u0EA5\u0EA7\u0EAA\u0EAB\u0EAD-\u0EB0\u0EB2\u0EB3\u0EBD\u0EC0-\u0EC4\u0EC6]|[\u0EDC-\u0EDF\u0F00\u0F40-\u0F47\u0F49-\u0F6C\u0F88-\u0F8C\u1000-\u102A]|[\u103F\u1050-\u1055\u105A-\u105D\u1061\u1065\u1066\u106E-\u1070\u1075-\u1081]|[\u108E\u10A0-\u10C5\u10C7\u10CD\u10D0-\u10FA\u10FC-\u1248\u124A-\u124D]|[\u1250-\u1256\u1258\u125A-\u125D\u1260-\u1288\u128A-\u128D\u1290-\u12B0]|[\u12B2-\u12B5\u12B8-\u12BE\u12C0\u12C2-\u12C5\u12C8-\u12D6\u12D8-\u1310]|[\u1312-\u1315\u1318-\u135A\u1380-\u138F\u13A0-\u13F4\u1401-\u166C]|[\u166F-\u167F\u1681-\u169A\u16A0-\u16EA\u1700-\u170C\u170E-\u1711]|[\u1720-\u1731\u1740-\u1751\u1760-\u176C\u176E-\u1770\u1780-\u17B3\u17D7]|[\u17DC\u1820-\u1877\u1880-\u18A8\u18AA\u18B0-\u18F5\u1900-\u191C]|[\u1950-\u196D\u1970-\u1974\u1980-\u19AB\u19C1-\u19C7\u1A00-\u1A16]|[\u1A20-\u1A54\u1AA7\u1B05-\u1B33\u1B45-\u1B4B\u1B83-\u1BA0\u1BAE\u1BAF]|[\u1BBA-\u1BE5\u1C00-\u1C23\u1C4D-\u1C4F\u1C5A-\u1C7D\u1CE9-\u1CEC]|[\u1CEE-\u1CF1\u1CF5\u1CF6\u1D00-\u1DBF\u1E00-\u1F15\u1F18-\u1F1D]|[\u1F20-\u1F45\u1F48-\u1F4D\u1F50-\u1F57\u1F59\u1F5B\u1F5D\u1F5F-\u1F7D]|[\u1F80-\u1FB4\u1FB6-\u1FBC\u1FBE\u1FC2-\u1FC4\u1FC6-\u1FCC\u1FD0-\u1FD3]|[\u1FD6-\u1FDB\u1FE0-\u1FEC\u1FF2-\u1FF4\u1FF6-\u1FFC\u2071\u207F]|[\u2090-\u209C\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128]|[\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2183\u2184]|[\u2C00-\u2C2E\u2C30-\u2C5E\u2C60-\u2CE4\u2CEB-\u2CEE\u2CF2\u2CF3]|[\u2D00-\u2D25\u2D27\u2D2D\u2D30-\u2D67\u2D6F\u2D80-\u2D96\u2DA0-\u2DA6]|[\u2DA8-\u2DAE\u2DB0-\u2DB6\u2DB8-\u2DBE\u2DC0-\u2DC6\u2DC8-\u2DCE]|[\u2DD0-\u2DD6\u2DD8-\u2DDE\u2E2F\u3005\u3006\u3031-\u3035\u303B\u303C]|[\u3041-\u3096\u309D-\u309F\u30A1-\u30FA\u30FC-\u30FF\u3105-\u312D]|[\u3131-\u318E\u31A0-\u31BA\u31F0-\u31FF\u3400-\u4DB5\u4E00-\u9FCC]|[\uA000-\uA48C\uA4D0-\uA4FD\uA500-\uA60C\uA610-\uA61F\uA62A\uA62B]|[\uA640-\uA66E\uA67F-\uA697\uA6A0-\uA6E5\uA717-\uA71F\uA722-\uA788]|[\uA78B-\uA78E\uA790-\uA793\uA7A0-\uA7AA\uA7F8-\uA801\uA803-\uA805]|[\uA807-\uA80A\uA80C-\uA822\uA840-\uA873\uA882-\uA8B3\uA8F2-\uA8F7\uA8FB]|[\uA90A-\uA925\uA930-\uA946\uA960-\uA97C\uA984-\uA9B2\uA9CF\uAA00-\uAA28]|[\uAA40-\uAA42\uAA44-\uAA4B\uAA60-\uAA76\uAA7A\uAA80-\uAAAF\uAAB1\uAAB5]|[\uAAB6\uAAB9-\uAABD\uAAC0\uAAC2\uAADB-\uAADD\uAAE0-\uAAEA\uAAF2-\uAAF4]|[\uAB01-\uAB06\uAB09-\uAB0E\uAB11-\uAB16\uAB20-\uAB26\uAB28-\uAB2E]|[\uABC0-\uABE2\uAC00-\uD7A3\uD7B0-\uD7C6\uD7CB-\uD7FB\uF900-\uFA6D]|[\uFA70-\uFAD9\uFB00-\uFB06\uFB13-\uFB17\uFB1D\uFB1F-\uFB28\uFB2A-\uFB36]|[\uFB38-\uFB3C\uFB3E\uFB40\uFB41\uFB43\uFB44\uFB46-\uFBB1\uFBD3-\uFD3D]|[\uFD50-\uFD8F\uFD92-\uFDC7\uFDF0-\uFDFB\uFE70-\uFE74\uFE76-\uFEFC]|[\uFF21-\uFF3A\uFF41-\uFF5A\uFF66-\uFFBE\uFFC2-\uFFC7\uFFCA-\uFFCF]|[\uFFD2-\uFFD7\uFFDA-\uFFDC])/,/^(?:\s)/,/^(?:$)/],
+conditions: {"string":{"rules":[28,29],"inclusive":false},"generic":{"rules":[25,26],"inclusive":false},"struct":{"rules":[12,13,14,15,16],"inclusive":false},"open_directive":{"rules":[1],"inclusive":false},"type_directive":{"rules":[2,3],"inclusive":false},"arg_directive":{"rules":[3,4],"inclusive":false},"INITIAL":{"rules":[0,5,6,7,8,9,10,11,17,18,19,20,21,22,23,24,27,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51],"inclusive":true}}
 });
 return lexer;
 })();
@@ -6867,13 +6900,29 @@ var parseDirective = function parseDirective(statement, context, type) {
 
 var addEntity = function addEntity(name) {
   if (typeof entities[name] === 'undefined') {
-    entities[name] = name;
-    _logger__WEBPACK_IMPORTED_MODULE_0__["logger"].debug('Added new entity :', name);
+    entities[name] = {
+      attributes: []
+    };
+    _logger__WEBPACK_IMPORTED_MODULE_0__["logger"].info('Added new entity :', name);
   }
+
+  return entities[name];
 };
 
 var getEntities = function getEntities() {
   return entities;
+};
+
+var addAttributes = function addAttributes(entityName, attribs) {
+  var entity = addEntity(entityName); // May do nothing (if entity has already been added)
+  // Process attribs in reverse order due to effect of recursive construction (last attribute is first)
+
+  var i;
+
+  for (i = attribs.length - 1; i >= 0; i--) {
+    entity.attributes.push(attribs[i]);
+    _logger__WEBPACK_IMPORTED_MODULE_0__["logger"].debug('Added attribute ', attribs[i].attributeName);
+  }
 };
 /**
  * Add a relationship
@@ -6922,6 +6971,7 @@ var clear = function clear() {
     return _config__WEBPACK_IMPORTED_MODULE_2__["getConfig"]().er;
   },
   addEntity: addEntity,
+  addAttributes: addAttributes,
   getEntities: getEntities,
   addRelationship: addRelationship,
   getRelationships: getRelationships,
@@ -7031,12 +7081,94 @@ var setConf = function setConf(cnf) {
   }
 };
 /**
+ * Draw attributes for an entity
+ * @param groupNode the svg group node for the entity
+ * @param entityTextNode the svg node for the entity label text
+ * @param attributes an array of attributes defined for the entity (each attribute has a type and a name)
+ * @return the bounding box of the entity, after attributes have been added
+ */
+
+var drawAttributes = function drawAttributes(groupNode, entityTextNode, attributes) {
+  var heightPadding = conf.entityPadding / 3; // Padding internal to attribute boxes
+
+  var widthPadding = conf.entityPadding / 3; // Ditto
+
+  var attrFontSize = conf.fontSize * 0.85;
+  var labelBBox = entityTextNode.node().getBBox();
+  var attributeNodes = []; // Intermediate storage for attribute nodes created so that we can do a second pass
+
+  var maxTypeWidth = 0;
+  var maxNameWidth = 0;
+  var cumulativeHeight = labelBBox.height + heightPadding * 2;
+  var attrNum = 1;
+  attributes.forEach(function (item) {
+    var attrPrefix = "".concat(entityTextNode.node().id, "-attr-").concat(attrNum); // Add a text node for the attribute type
+
+    var typeNode = groupNode.append('text').attr('class', 'er entityLabel').attr('id', "".concat(attrPrefix, "-type")).attr('x', 0).attr('y', 0).attr('dominant-baseline', 'middle').attr('text-anchor', 'left').attr('style', 'font-family: ' + Object(_config__WEBPACK_IMPORTED_MODULE_5__["getConfig"])().fontFamily + '; font-size: ' + attrFontSize + 'px').text(item.attributeType); // Add a text node for the attribute name
+
+    var nameNode = groupNode.append('text').attr('class', 'er entityLabel').attr('id', "".concat(attrPrefix, "-name")).attr('x', 0).attr('y', 0).attr('dominant-baseline', 'middle').attr('text-anchor', 'left').attr('style', 'font-family: ' + Object(_config__WEBPACK_IMPORTED_MODULE_5__["getConfig"])().fontFamily + '; font-size: ' + attrFontSize + 'px').text(item.attributeName); // Keep a reference to the nodes so that we can iterate through them later
+
+    attributeNodes.push({
+      tn: typeNode,
+      nn: nameNode
+    });
+    var typeBBox = typeNode.node().getBBox();
+    var nameBBox = nameNode.node().getBBox();
+    maxTypeWidth = Math.max(maxTypeWidth, typeBBox.width);
+    maxNameWidth = Math.max(maxNameWidth, nameBBox.width);
+    cumulativeHeight += Math.max(typeBBox.height, nameBBox.height) + heightPadding * 2;
+    attrNum += 1;
+  }); // Calculate the new bounding box of the overall entity, now that attributes have been added
+
+  var bBox = {
+    width: Math.max(conf.minEntityWidth, Math.max(labelBBox.width + conf.entityPadding * 2, maxTypeWidth + maxNameWidth + widthPadding * 4)),
+    height: attributes.length > 0 ? cumulativeHeight : Math.max(conf.minEntityHeight, labelBBox.height + conf.entityPadding * 2)
+  }; // There might be some spare width for padding out attributes if the entity name is very long
+
+  var spareWidth = Math.max(0, bBox.width - (maxTypeWidth + maxNameWidth) - widthPadding * 4);
+
+  if (attributes.length > 0) {
+    // Position the entity label near the top of the entity bounding box
+    entityTextNode.attr('transform', 'translate(' + bBox.width / 2 + ',' + (heightPadding + labelBBox.height / 2) + ')'); // Add rectangular boxes for the attribute types/names
+
+    var heightOffset = labelBBox.height + heightPadding * 2; // Start at the bottom of the entity label
+
+    var attribStyle = 'attributeBoxOdd'; // We will flip the style on alternate rows to achieve a banded effect
+
+    attributeNodes.forEach(function (nodePair) {
+      // Calculate the alignment y co-ordinate for the type/name of the attribute
+      var alignY = heightOffset + heightPadding + Math.max(nodePair.tn.node().getBBox().height, nodePair.nn.node().getBBox().height) / 2; // Position the type of the attribute
+
+      nodePair.tn.attr('transform', 'translate(' + widthPadding + ',' + alignY + ')'); // Insert a rectangle for the type
+
+      var typeRect = groupNode.insert('rect', '#' + nodePair.tn.node().id).attr('class', "er ".concat(attribStyle)).attr('fill', conf.fill).attr('fill-opacity', '100%').attr('stroke', conf.stroke).attr('x', 0).attr('y', heightOffset).attr('width', maxTypeWidth + widthPadding * 2 + spareWidth / 2).attr('height', nodePair.tn.node().getBBox().height + heightPadding * 2); // Position the name of the attribute
+
+      nodePair.nn.attr('transform', 'translate(' + (parseFloat(typeRect.attr('width')) + widthPadding) + ',' + alignY + ')'); // Insert a rectangle for the name
+
+      groupNode.insert('rect', '#' + nodePair.nn.node().id).attr('class', "er ".concat(attribStyle)).attr('fill', conf.fill).attr('fill-opacity', '100%').attr('stroke', conf.stroke).attr('x', "".concat(typeRect.attr('x') + typeRect.attr('width'))) //.attr('x', maxTypeWidth + (widthPadding * 2))
+      .attr('y', heightOffset).attr('width', maxNameWidth + widthPadding * 2 + spareWidth / 2).attr('height', nodePair.nn.node().getBBox().height + heightPadding * 2); // Increment the height offset to move to the next row
+
+      heightOffset += Math.max(nodePair.tn.node().getBBox().height, nodePair.nn.node().getBBox().height) + heightPadding * 2; // Flip the attribute style for row banding
+
+      attribStyle = attribStyle == 'attributeBoxOdd' ? 'attributeBoxEven' : 'attributeBoxOdd';
+    });
+  } else {
+    // Ensure the entity box is a decent size without any attributes
+    bBox.height = Math.max(conf.minEntityHeight, cumulativeHeight); // Position the entity label in the middle of the box
+
+    entityTextNode.attr('transform', 'translate(' + bBox.width / 2 + ',' + bBox.height / 2 + ')');
+  }
+
+  return bBox;
+};
+/**
  * Use D3 to construct the svg elements for the entities
  * @param svgNode the svg node that contains the diagram
  * @param entities The entities to be drawn
  * @param graph The graph that contains the vertex and edge definitions post-layout
  * @return The first entity that was inserted
  */
+
 
 var drawEntities = function drawEntities(svgNode, entities, graph) {
   var keys = Object.keys(entities);
@@ -7048,13 +7180,12 @@ var drawEntities = function drawEntities(svgNode, entities, graph) {
     // which then determines the size of the rectangle
 
     var textId = 'entity-' + id;
-    var textNode = groupNode.append('text').attr('class', 'er entityLabel').attr('id', textId).attr('x', 0).attr('y', 0).attr('dominant-baseline', 'middle').attr('text-anchor', 'middle').attr('style', 'font-family: ' + Object(_config__WEBPACK_IMPORTED_MODULE_5__["getConfig"])().fontFamily + '; font-size: ' + conf.fontSize + 'px').text(id); // Calculate the width and height of the entity
+    var textNode = groupNode.append('text').attr('class', 'er entityLabel').attr('id', textId).attr('x', 0).attr('y', 0).attr('dominant-baseline', 'middle').attr('text-anchor', 'middle').attr('style', 'font-family: ' + Object(_config__WEBPACK_IMPORTED_MODULE_5__["getConfig"])().fontFamily + '; font-size: ' + conf.fontSize + 'px').text(id);
 
-    var textBBox = textNode.node().getBBox();
-    var entityWidth = Math.max(conf.minEntityWidth, textBBox.width + conf.entityPadding * 2);
-    var entityHeight = Math.max(conf.minEntityHeight, textBBox.height + conf.entityPadding * 2); // Make sure the text gets centred relative to the entity box
+    var _drawAttributes = drawAttributes(groupNode, textNode, entities[id].attributes),
+        entityWidth = _drawAttributes.width,
+        entityHeight = _drawAttributes.height; // Draw the rectangle - insert it before the text so that the text is not obscured
 
-    textNode.attr('transform', 'translate(' + entityWidth / 2 + ',' + entityHeight / 2 + ')'); // Draw the rectangle - insert it before the text so that the text is not obscured
 
     var rectNode = groupNode.insert('rect', '#' + textId).attr('class', 'er entityBox').attr('fill', conf.fill).attr('fill-opacity', '100%').attr('stroke', conf.stroke).attr('x', 0).attr('y', 0).attr('width', entityWidth).attr('height', entityHeight);
     var rectBBox = rectNode.node().getBBox(); // Add the entity to the graph
@@ -7354,12 +7485,12 @@ var draw = function draw(text, id) {
   }
 */
 var parser = (function(){
-var o=function(k,v,o,l){for(o=o||{},l=k.length;l--;o[k[l]]=v);return o},$V0=[1,2],$V1=[1,5],$V2=[6,9,11,20,30],$V3=[1,17],$V4=[1,20],$V5=[1,24],$V6=[1,25],$V7=[1,26],$V8=[1,27],$V9=[20,27,28],$Va=[4,6,9,11,20,30],$Vb=[23,24,25,26];
+var o=function(k,v,o,l){for(o=o||{},l=k.length;l--;o[k[l]]=v);return o},$V0=[1,2],$V1=[1,5],$V2=[6,9,11,23,37],$V3=[1,17],$V4=[1,20],$V5=[1,25],$V6=[1,26],$V7=[1,27],$V8=[1,28],$V9=[1,37],$Va=[23,34,35],$Vb=[4,6,9,11,23,37],$Vc=[30,31,32,33],$Vd=[22,27];
 var parser = {trace: function trace () { },
 yy: {},
-symbols_: {"error":2,"start":3,"ER_DIAGRAM":4,"document":5,"EOF":6,"directive":7,"line":8,"SPACE":9,"statement":10,"NEWLINE":11,"openDirective":12,"typeDirective":13,"closeDirective":14,":":15,"argDirective":16,"entityName":17,"relSpec":18,"role":19,"ALPHANUM":20,"cardinality":21,"relType":22,"ZERO_OR_ONE":23,"ZERO_OR_MORE":24,"ONE_OR_MORE":25,"ONLY_ONE":26,"NON_IDENTIFYING":27,"IDENTIFYING":28,"WORD":29,"open_directive":30,"type_directive":31,"arg_directive":32,"close_directive":33,"$accept":0,"$end":1},
-terminals_: {2:"error",4:"ER_DIAGRAM",6:"EOF",9:"SPACE",11:"NEWLINE",15:":",20:"ALPHANUM",23:"ZERO_OR_ONE",24:"ZERO_OR_MORE",25:"ONE_OR_MORE",26:"ONLY_ONE",27:"NON_IDENTIFYING",28:"IDENTIFYING",29:"WORD",30:"open_directive",31:"type_directive",32:"arg_directive",33:"close_directive"},
-productions_: [0,[3,3],[3,2],[5,0],[5,2],[8,2],[8,1],[8,1],[8,1],[7,4],[7,6],[10,1],[10,5],[17,1],[18,3],[21,1],[21,1],[21,1],[21,1],[22,1],[22,1],[19,1],[19,1],[12,1],[13,1],[16,1],[14,1]],
+symbols_: {"error":2,"start":3,"ER_DIAGRAM":4,"document":5,"EOF":6,"directive":7,"line":8,"SPACE":9,"statement":10,"NEWLINE":11,"openDirective":12,"typeDirective":13,"closeDirective":14,":":15,"argDirective":16,"entityName":17,"relSpec":18,"role":19,"BLOCK_START":20,"attributes":21,"BLOCK_STOP":22,"ALPHANUM":23,"attribute":24,"attributeType":25,"attributeName":26,"ATTRIBUTE_WORD":27,"cardinality":28,"relType":29,"ZERO_OR_ONE":30,"ZERO_OR_MORE":31,"ONE_OR_MORE":32,"ONLY_ONE":33,"NON_IDENTIFYING":34,"IDENTIFYING":35,"WORD":36,"open_directive":37,"type_directive":38,"arg_directive":39,"close_directive":40,"$accept":0,"$end":1},
+terminals_: {2:"error",4:"ER_DIAGRAM",6:"EOF",9:"SPACE",11:"NEWLINE",15:":",20:"BLOCK_START",22:"BLOCK_STOP",23:"ALPHANUM",27:"ATTRIBUTE_WORD",30:"ZERO_OR_ONE",31:"ZERO_OR_MORE",32:"ONE_OR_MORE",33:"ONLY_ONE",34:"NON_IDENTIFYING",35:"IDENTIFYING",36:"WORD",37:"open_directive",38:"type_directive",39:"arg_directive",40:"close_directive"},
+productions_: [0,[3,3],[3,2],[5,0],[5,2],[8,2],[8,1],[8,1],[8,1],[7,4],[7,6],[10,1],[10,5],[10,4],[10,3],[10,1],[17,1],[21,1],[21,2],[24,2],[25,1],[26,1],[18,3],[28,1],[28,1],[28,1],[28,1],[29,1],[29,1],[19,1],[19,1],[12,1],[13,1],[16,1],[14,1]],
 performAction: function anonymous(yytext, yyleng, yylineno, yy, yystate /* action[1] */, $$ /* vstack */, _$ /* lstack */) {
 /* this == yyval */
 
@@ -7389,54 +7520,80 @@ case 12:
       
 break;
 case 13:
- this.$ = $$[$0]; /*console.log('Entity: ' + $$[$0]);*/ 
+
+          /* console.log('detected block'); */
+          yy.addEntity($$[$0-3]);
+          yy.addAttributes($$[$0-3], $$[$0-1]);
+          /* console.log('handled block'); */
+      
 break;
 case 14:
+ yy.addEntity($$[$0-2]); 
+break;
+case 15:
+ yy.addEntity($$[$0]); 
+break;
+case 16:
+ this.$ = $$[$0]; /*console.log('Entity: ' + $$[$0]);*/ 
+break;
+case 17:
+ this.$ = [$$[$0]]; 
+break;
+case 18:
+ $$[$0].push($$[$0-1]); this.$=$$[$0]; 
+break;
+case 19:
+ this.$ = { attributeType: $$[$0-1], attributeName: $$[$0] }; 
+break;
+case 20: case 21:
+ this.$=$$[$0]; 
+break;
+case 22:
 
         this.$ = { cardA: $$[$0], relType: $$[$0-1], cardB: $$[$0-2] };
         /*console.log('relSpec: ' + $$[$0] + $$[$0-1] + $$[$0-2]);*/
       
 break;
-case 15:
+case 23:
  this.$ = yy.Cardinality.ZERO_OR_ONE; 
 break;
-case 16:
+case 24:
  this.$ = yy.Cardinality.ZERO_OR_MORE; 
 break;
-case 17:
+case 25:
  this.$ = yy.Cardinality.ONE_OR_MORE; 
 break;
-case 18:
+case 26:
  this.$ = yy.Cardinality.ONLY_ONE; 
 break;
-case 19:
+case 27:
  this.$ = yy.Identification.NON_IDENTIFYING;  
 break;
-case 20:
+case 28:
  this.$ = yy.Identification.IDENTIFYING; 
 break;
-case 21:
+case 29:
  this.$ = $$[$0].replace(/"/g, ''); 
 break;
-case 22:
+case 30:
  this.$ = $$[$0]; 
 break;
-case 23:
+case 31:
  yy.parseDirective('%%{', 'open_directive'); 
 break;
-case 24:
+case 32:
  yy.parseDirective($$[$0], 'type_directive'); 
 break;
-case 25:
+case 33:
  $$[$0] = $$[$0].trim().replace(/'/g, '"'); yy.parseDirective($$[$0], 'arg_directive'); 
 break;
-case 26:
+case 34:
  yy.parseDirective('}%%', 'close_directive', 'er'); 
 break;
 }
 },
-table: [{3:1,4:$V0,7:3,12:4,30:$V1},{1:[3]},o($V2,[2,3],{5:6}),{3:7,4:$V0,7:3,12:4,30:$V1},{13:8,31:[1,9]},{31:[2,23]},{6:[1,10],7:15,8:11,9:[1,12],10:13,11:[1,14],12:4,17:16,20:$V3,30:$V1},{1:[2,2]},{14:18,15:[1,19],33:$V4},o([15,33],[2,24]),o($V2,[2,8],{1:[2,1]}),o($V2,[2,4]),{7:15,10:21,12:4,17:16,20:$V3,30:$V1},o($V2,[2,6]),o($V2,[2,7]),o($V2,[2,11]),{18:22,21:23,23:$V5,24:$V6,25:$V7,26:$V8},o([15,23,24,25,26],[2,13]),{11:[1,28]},{16:29,32:[1,30]},{11:[2,26]},o($V2,[2,5]),{17:31,20:$V3},{22:32,27:[1,33],28:[1,34]},o($V9,[2,15]),o($V9,[2,16]),o($V9,[2,17]),o($V9,[2,18]),o($Va,[2,9]),{14:35,33:$V4},{33:[2,25]},{15:[1,36]},{21:37,23:$V5,24:$V6,25:$V7,26:$V8},o($Vb,[2,19]),o($Vb,[2,20]),{11:[1,38]},{19:39,20:[1,41],29:[1,40]},{20:[2,14]},o($Va,[2,10]),o($V2,[2,12]),o($V2,[2,21]),o($V2,[2,22])],
-defaultActions: {5:[2,23],7:[2,2],20:[2,26],30:[2,25],37:[2,14]},
+table: [{3:1,4:$V0,7:3,12:4,37:$V1},{1:[3]},o($V2,[2,3],{5:6}),{3:7,4:$V0,7:3,12:4,37:$V1},{13:8,38:[1,9]},{38:[2,31]},{6:[1,10],7:15,8:11,9:[1,12],10:13,11:[1,14],12:4,17:16,23:$V3,37:$V1},{1:[2,2]},{14:18,15:[1,19],40:$V4},o([15,40],[2,32]),o($V2,[2,8],{1:[2,1]}),o($V2,[2,4]),{7:15,10:21,12:4,17:16,23:$V3,37:$V1},o($V2,[2,6]),o($V2,[2,7]),o($V2,[2,11]),o($V2,[2,15],{18:22,28:24,20:[1,23],30:$V5,31:$V6,32:$V7,33:$V8}),o([6,9,11,15,20,23,30,31,32,33,37],[2,16]),{11:[1,29]},{16:30,39:[1,31]},{11:[2,34]},o($V2,[2,5]),{17:32,23:$V3},{21:33,22:[1,34],24:35,25:36,27:$V9},{29:38,34:[1,39],35:[1,40]},o($Va,[2,23]),o($Va,[2,24]),o($Va,[2,25]),o($Va,[2,26]),o($Vb,[2,9]),{14:41,40:$V4},{40:[2,33]},{15:[1,42]},{22:[1,43]},o($V2,[2,14]),{21:44,22:[2,17],24:35,25:36,27:$V9},{26:45,27:[1,46]},{27:[2,20]},{28:47,30:$V5,31:$V6,32:$V7,33:$V8},o($Vc,[2,27]),o($Vc,[2,28]),{11:[1,48]},{19:49,23:[1,51],36:[1,50]},o($V2,[2,13]),{22:[2,18]},o($Vd,[2,19]),o($Vd,[2,21]),{23:[2,22]},o($Vb,[2,10]),o($V2,[2,12]),o($V2,[2,29]),o($V2,[2,30])],
+defaultActions: {5:[2,31],7:[2,2],20:[2,34],31:[2,33],37:[2,20],44:[2,18],47:[2,22]},
 parseError: function parseError (str, hash) {
     if (hash.recoverable) {
         this.trace(str);
@@ -7915,15 +8072,15 @@ options: {"case-insensitive":true},
 performAction: function anonymous(yy,yy_,$avoiding_name_collisions,YY_START) {
 var YYSTATE=YY_START;
 switch($avoiding_name_collisions) {
-case 0: this.begin('open_directive'); return 30; 
+case 0: this.begin('open_directive'); return 37; 
 break;
-case 1: this.begin('type_directive'); return 31; 
+case 1: this.begin('type_directive'); return 38; 
 break;
 case 2: this.popState(); this.begin('arg_directive'); return 15; 
 break;
-case 3: this.popState(); this.popState(); return 33; 
+case 3: this.popState(); this.popState(); return 40; 
 break;
-case 4:return 32;
+case 4:return 39;
 break;
 case 5:/* skip comments */
 break;
@@ -7935,42 +8092,54 @@ case 8:/* skip whitespace */
 break;
 case 9:return 9;
 break;
-case 10:return 29;
+case 10:return 36;
 break;
 case 11:return 4;
 break;
-case 12:return 23;
+case 12: this.begin("block"); return 20; 
 break;
-case 13:return 24;
+case 13:/* skip whitespace in block */
 break;
-case 14:return 25;
+case 14: return 27; 
 break;
-case 15:return 26;
+case 15:/* nothing */
 break;
-case 16:return 23;
+case 16: this.popState(); return 22; 
 break;
-case 17:return 24;
+case 17:return yy_.yytext[0];
 break;
-case 18:return 25;
+case 18:return 30;
 break;
-case 19:return 27;
+case 19:return 31;
 break;
-case 20:return 28;
+case 20:return 32;
 break;
-case 21:return 27;
+case 21:return 33;
 break;
-case 22:return 27;
+case 22:return 30;
 break;
-case 23:return 20;
+case 23:return 31;
 break;
-case 24:return yy_.yytext[0];
+case 24:return 32;
 break;
-case 25:return 6;
+case 25:return 34;
+break;
+case 26:return 35;
+break;
+case 27:return 34;
+break;
+case 28:return 34;
+break;
+case 29:return 23;
+break;
+case 30:return yy_.yytext[0];
+break;
+case 31:return 6;
 break;
 }
 },
-rules: [/^(?:%%\{)/i,/^(?:((?:(?!\}%%)[^:.])*))/i,/^(?::)/i,/^(?:\}%%)/i,/^(?:((?:(?!\}%%).|\n)*))/i,/^(?:%(?!\{)[^\n]*)/i,/^(?:[^\}]%%[^\n]*)/i,/^(?:[\n]+)/i,/^(?:\s+)/i,/^(?:[\s]+)/i,/^(?:"[^"]*")/i,/^(?:erDiagram\b)/i,/^(?:\|o\b)/i,/^(?:\}o\b)/i,/^(?:\}\|)/i,/^(?:\|\|)/i,/^(?:o\|)/i,/^(?:o\{)/i,/^(?:\|\{)/i,/^(?:\.\.)/i,/^(?:--)/i,/^(?:\.-)/i,/^(?:-\.)/i,/^(?:[A-Za-z][A-Za-z0-9\-]*)/i,/^(?:.)/i,/^(?:$)/i],
-conditions: {"open_directive":{"rules":[1],"inclusive":false},"type_directive":{"rules":[2,3],"inclusive":false},"arg_directive":{"rules":[3,4],"inclusive":false},"INITIAL":{"rules":[0,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25],"inclusive":true}}
+rules: [/^(?:%%\{)/i,/^(?:((?:(?!\}%%)[^:.])*))/i,/^(?::)/i,/^(?:\}%%)/i,/^(?:((?:(?!\}%%).|\n)*))/i,/^(?:%(?!\{)[^\n]*)/i,/^(?:[^\}]%%[^\n]*)/i,/^(?:[\n]+)/i,/^(?:\s+)/i,/^(?:[\s]+)/i,/^(?:"[^"]*")/i,/^(?:erDiagram\b)/i,/^(?:\{)/i,/^(?:\s+)/i,/^(?:[A-Za-z][A-Za-z0-9\-_]*)/i,/^(?:[\n]+)/i,/^(?:\})/i,/^(?:.)/i,/^(?:\|o\b)/i,/^(?:\}o\b)/i,/^(?:\}\|)/i,/^(?:\|\|)/i,/^(?:o\|)/i,/^(?:o\{)/i,/^(?:\|\{)/i,/^(?:\.\.)/i,/^(?:--)/i,/^(?:\.-)/i,/^(?:-\.)/i,/^(?:[A-Za-z][A-Za-z0-9\-_]*)/i,/^(?:.)/i,/^(?:$)/i],
+conditions: {"open_directive":{"rules":[1],"inclusive":false},"type_directive":{"rules":[2,3],"inclusive":false},"arg_directive":{"rules":[3,4],"inclusive":false},"block":{"rules":[13,14,15,16,17],"inclusive":false},"INITIAL":{"rules":[0,5,6,7,8,9,10,11,12,18,19,20,21,22,23,24,25,26,27,28,29,30,31],"inclusive":true}}
 });
 return lexer;
 })();
@@ -8013,7 +8182,7 @@ if ( true && __webpack_require__.c[__webpack_require__.s] === module) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var getStyles = function getStyles(options) {
-  return "\n  .entityBox {\n    fill: ".concat(options.mainBkg, ";\n    stroke: ").concat(options.nodeBorder, ";\n  }\n\n  .relationshipLabelBox {\n    fill: ").concat(options.tertiaryColor, ";\n    opacity: 0.7;\n    background-color: ").concat(options.tertiaryColor, ";\n      rect {\n        opacity: 0.5;\n      }\n  }\n\n    .relationshipLine {\n      stroke: ").concat(options.lineColor, ";\n    }\n");
+  return "\n  .entityBox {\n    fill: ".concat(options.mainBkg, ";\n    stroke: ").concat(options.nodeBorder, ";\n  }\n\n  .attributeBoxOdd {\n    fill: #ffffff;\n    stroke: ").concat(options.nodeBorder, ";\n  }\n\n  .attributeBoxEven {\n    fill: #f2f2f2;\n    stroke: ").concat(options.nodeBorder, ";\n  }\n\n  .relationshipLabelBox {\n    fill: ").concat(options.tertiaryColor, ";\n    opacity: 0.7;\n    background-color: ").concat(options.tertiaryColor, ";\n      rect {\n        opacity: 0.5;\n      }\n  }\n\n    .relationshipLine {\n      stroke: ").concat(options.lineColor, ";\n    }\n");
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (getStyles);
@@ -8483,11 +8652,11 @@ var parseDirective = function parseDirective(statement, context, type) {
  */
 
 var lookUpDomId = function lookUpDomId(id) {
-  var veritceKeys = Object.keys(vertices);
+  var verticeKeys = Object.keys(vertices);
 
-  for (var i = 0; i < veritceKeys.length; i++) {
-    if (vertices[veritceKeys[i]].id === id) {
-      return vertices[veritceKeys[i]].domId;
+  for (var i = 0; i < verticeKeys.length; i++) {
+    if (vertices[verticeKeys[i]].id === id) {
+      return vertices[verticeKeys[i]].domId;
     }
   }
 
@@ -8860,6 +9029,7 @@ var setGen = function setGen(ver) {
   version = ver || 'gen-1';
 };
 /**
+ * 
  *
  * @returns {string}
  */
@@ -8868,7 +9038,7 @@ var defaultStyle = function defaultStyle() {
   return 'fill:#ffa;stroke: #f66; stroke-width: 3px; stroke-dasharray: 5, 5;fill:#ffa;stroke: #666;';
 };
 /**
- * Clears the internal graph db so that a new graph can be parsed.
+ * Function called by parser when a subgraph node definition has been found
  */
 
 var addSubGraph = function addSubGraph(_id, list, _title) {
@@ -9171,7 +9341,7 @@ var destructLink = function destructLink(_str, _startStr) {
   }
 
   return info;
-}; // Todo optimizer this by caching existing nodes
+}; // Todo optimize this by caching existing nodes
 
 
 var exists = function exists(allSgs, _id) {
@@ -9472,7 +9642,10 @@ var addEdges = function addEdges(edges, g) {
     var linkId = 'L-' + edge.start + '-' + edge.end;
     var linkNameStart = 'LS-' + edge.start;
     var linkNameEnd = 'LE-' + edge.end;
-    var edgeData = {};
+    var edgeData = {
+      style: '',
+      labelStyle: ''
+    };
     edgeData.minlen = edge.length || 1; //edgeData.id = 'id' + cnt;
     // Set link type for rendering
 
@@ -9508,51 +9681,48 @@ var addEdges = function addEdges(edges, g) {
       case 'arrow_circle':
         edgeData.arrowTypeEnd = 'arrow_circle';
         break;
-    } // logger.info('apa', edgeData, edge);
-    // edgeData.arrowTypeStart = edge.arrowTypeStart;
-    // edgeData.arrowTypeStart = edge.arrowTypeStart;
-    // edgeData.arrowType = edgeData.arrowTypeEnd;
-    // logger.info('apa', edgeData, edge);
-
+    }
 
     var style = '';
     var labelStyle = '';
+
+    switch (edge.stroke) {
+      case 'normal':
+        style = 'fill:none;';
+
+        if (typeof defaultStyle !== 'undefined') {
+          style = defaultStyle;
+        }
+
+        if (typeof defaultLabelStyle !== 'undefined') {
+          labelStyle = defaultLabelStyle;
+        }
+
+        edgeData.thickness = 'normal';
+        edgeData.pattern = 'solid';
+        break;
+
+      case 'dotted':
+        edgeData.thickness = 'normal';
+        edgeData.pattern = 'dotted';
+        edgeData.style = 'fill:none;stroke-width:2px;stroke-dasharray:3;';
+        break;
+
+      case 'thick':
+        edgeData.thickness = 'thick';
+        edgeData.pattern = 'solid';
+        edgeData.style = 'stroke-width: 3.5px;fill:none;';
+        break;
+    }
 
     if (typeof edge.style !== 'undefined') {
       var styles = Object(_utils__WEBPACK_IMPORTED_MODULE_9__["getStylesFromArray"])(edge.style);
       style = styles.style;
       labelStyle = styles.labelStyle;
-    } else {
-      switch (edge.stroke) {
-        case 'normal':
-          style = 'fill:none';
-
-          if (typeof defaultStyle !== 'undefined') {
-            style = defaultStyle;
-          }
-
-          if (typeof defaultLabelStyle !== 'undefined') {
-            labelStyle = defaultLabelStyle;
-          }
-
-          edgeData.thickness = 'normal';
-          edgeData.pattern = 'solid';
-          break;
-
-        case 'dotted':
-          edgeData.thickness = 'normal';
-          edgeData.pattern = 'dotted';
-          break;
-
-        case 'thick':
-          edgeData.thickness = 'thick';
-          edgeData.pattern = 'solid';
-          break;
-      }
     }
 
-    edgeData.style = style;
-    edgeData.labelStyle = labelStyle;
+    edgeData.style = edgeData.style += style;
+    edgeData.labelStyle = edgeData.labelStyle += labelStyle;
 
     if (typeof edge.interpolate !== 'undefined') {
       edgeData.curve = Object(_utils__WEBPACK_IMPORTED_MODULE_9__["interpolateToCurve"])(edge.interpolate, d3__WEBPACK_IMPORTED_MODULE_1__["curveLinear"]);
@@ -9569,22 +9739,21 @@ var addEdges = function addEdges(edges, g) {
     } else {
       edgeData.arrowheadStyle = 'fill: #333';
       edgeData.labelpos = 'c';
+    } // if (getConfig().flowchart.htmlLabels && false) {
+    //   // eslint-disable-line
+    //   edgeData.labelType = 'html';
+    //   edgeData.label = `<span id="L-${linkId}" class="edgeLabel L-${linkNameStart}' L-${linkNameEnd}">${edge.text}</span>`;
+    // } else {
 
-      if (Object(_config__WEBPACK_IMPORTED_MODULE_4__["getConfig"])().flowchart.htmlLabels && false) {
-        // eslint-disable-line
-        edgeData.labelType = 'html';
-        edgeData.label = "<span id=\"L-".concat(linkId, "\" class=\"edgeLabel L-").concat(linkNameStart, "' L-").concat(linkNameEnd, "\">").concat(edge.text, "</span>");
-      } else {
-        edgeData.labelType = 'text';
-        edgeData.label = edge.text.replace(_common_common__WEBPACK_IMPORTED_MODULE_8__["default"].lineBreakRegex, '\n');
 
-        if (typeof edge.style === 'undefined') {
-          edgeData.style = edgeData.style || 'stroke: #333; stroke-width: 1.5px;fill:none';
-        }
+    edgeData.labelType = 'text';
+    edgeData.label = edge.text.replace(_common_common__WEBPACK_IMPORTED_MODULE_8__["default"].lineBreakRegex, '\n');
 
-        edgeData.labelStyle = edgeData.labelStyle.replace('color:', 'fill:');
-      }
+    if (typeof edge.style === 'undefined') {
+      edgeData.style = edgeData.style || 'stroke: #333; stroke-width: 1.5px;fill:none;';
     }
+
+    edgeData.labelStyle = edgeData.labelStyle.replace('color:', 'fill:'); // }
 
     edgeData.id = linkId;
     edgeData.classes = 'flowchart-link ' + linkNameStart + ' ' + linkNameEnd; // Add the edge to the graph
@@ -9593,7 +9762,7 @@ var addEdges = function addEdges(edges, g) {
   });
 };
 /**
- * Returns the all the styles from classDef statements in the graph definition.
+ * Returns all the styles from classDef statements in the graph definition.
  * @returns {object} classDef styles
  */
 
@@ -9661,7 +9830,7 @@ var draw = function draw(text, id) {
     subG = subGraphs[_i];
     _logger__WEBPACK_IMPORTED_MODULE_7__["logger"].info('Subgraph - ', subG);
     _flowDb__WEBPACK_IMPORTED_MODULE_2__["default"].addVertex(subG.id, subG.title, 'group', undefined, subG.classes);
-  } // Fetch the verices/nodes and edges/links from the parsed graph definition
+  } // Fetch the vertices/nodes and edges/links from the parsed graph definition
 
 
   var vert = _flowDb__WEBPACK_IMPORTED_MODULE_2__["default"].getVertices();
@@ -10044,7 +10213,9 @@ var addEdges = function addEdges(edges, g) {
 
       if (Object(_config__WEBPACK_IMPORTED_MODULE_4__["getConfig"])().flowchart.htmlLabels) {
         edgeData.labelType = 'html';
-        edgeData.label = "<span id=\"L-".concat(linkId, "\" class=\"edgeLabel L-").concat(linkNameStart, "' L-").concat(linkNameEnd, "\">").concat(edge.text, "</span>");
+        edgeData.label = "<span id=\"L-".concat(linkId, "\" class=\"edgeLabel L-").concat(linkNameStart, "' L-").concat(linkNameEnd, "\">").concat(edge.text.replace(/fa[lrsb]?:fa-[\w-]+/g, function (s) {
+          return "<i class='".concat(s.replace(':', ' '), "'></i>");
+        }), "</span>");
       } else {
         edgeData.labelType = 'text';
         edgeData.label = edge.text.replace(_common_common__WEBPACK_IMPORTED_MODULE_8__["default"].lineBreakRegex, '\n');
@@ -11322,13 +11493,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config */ "./src/config.js");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils */ "./src/utils.js");
 /* harmony import */ var _mermaidAPI__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../mermaidAPI */ "./src/mermaidAPI.js");
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 
 
@@ -19688,6 +19863,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../common/common */ "./src/diagrams/common/common.js");
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../config */ "./src/config.js");
 /* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../logger */ "./src/logger.js");
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 
 
 
@@ -19891,12 +20072,12 @@ var _drawLongText = function _drawLongText(_text, x, y, g) {
   text = text.replace(/\n/g, '<br/>');
   var lines = text.split(_common_common__WEBPACK_IMPORTED_MODULE_4__["default"].lineBreakRegex);
   var tHeight = 1.25 * Object(_config__WEBPACK_IMPORTED_MODULE_5__["getConfig"])().state.noteMargin;
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
+
+  var _iterator = _createForOfIteratorHelper(lines),
+      _step;
 
   try {
-    for (var _iterator = lines[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
       var _line = _step.value;
 
       var txt = _line.trim();
@@ -19916,18 +20097,9 @@ var _drawLongText = function _drawLongText(_text, x, y, g) {
       }
     }
   } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
+    _iterator.e(err);
   } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator.return != null) {
-        _iterator.return();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
+    _iterator.f();
   }
 
   return {
@@ -21044,13 +21216,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addTaskOrg", function() { return addTaskOrg; });
 /* harmony import */ var _mermaidAPI__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../mermaidAPI */ "./src/mermaidAPI.js");
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../config */ "./src/config.js");
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 
 
@@ -23686,9 +23862,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
-var Theme =
-/*#__PURE__*/
-function () {
+var Theme = /*#__PURE__*/function () {
   function Theme() {
     _classCallCheck(this, Theme);
 
@@ -23751,7 +23925,7 @@ function () {
       this.clusterBorder = this.clusterBorder || this.tertiaryBorderColor;
       this.defaultLinkColor = this.defaultLinkColor || this.lineColor;
       this.titleColor = this.titleColor || this.tertiaryTextColor;
-      this.edgeLabelBackground = this.edgeLabelBackground || this.darkMode ? Object(khroma__WEBPACK_IMPORTED_MODULE_0__["darken"])(this.secondaryColor, 30) : this.secondaryColor;
+      this.edgeLabelBackground = this.edgeLabelBackground || (this.darkMode ? Object(khroma__WEBPACK_IMPORTED_MODULE_0__["darken"])(this.secondaryColor, 30) : this.secondaryColor);
       this.nodeTextColor = this.nodeTextColor || this.primaryTextColor;
       /* Sequence Diagram variables */
       // this.actorBorder = lighten(this.border1, 0.5);
@@ -23883,9 +24057,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
-var Theme =
-/*#__PURE__*/
-function () {
+var Theme = /*#__PURE__*/function () {
   function Theme() {
     _classCallCheck(this, Theme);
 
@@ -24097,9 +24269,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
-var Theme =
-/*#__PURE__*/
-function () {
+var Theme = /*#__PURE__*/function () {
   function Theme() {
     _classCallCheck(this, Theme);
 
@@ -24323,9 +24493,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
-var Theme =
-/*#__PURE__*/
-function () {
+var Theme = /*#__PURE__*/function () {
   function Theme() {
     _classCallCheck(this, Theme);
 
@@ -24544,9 +24712,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
  // const Color = require ( 'khroma/dist/color' ).default
 // Color.format.hex.stringify(Color.parse('hsl(210, 66.6666666667%, 95%)')); // => "#EAF2FB"
 
-var Theme =
-/*#__PURE__*/
-function () {
+var Theme = /*#__PURE__*/function () {
   function Theme() {
     _classCallCheck(this, Theme);
 
@@ -24779,15 +24945,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _diagrams_common_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./diagrams/common/common */ "./src/diagrams/common/common.js");
 var _this = undefined;
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 
 
@@ -25604,12 +25776,12 @@ var calculateTextDimensions = memoize(function (text, config) {
       height: 0,
       lineHeight: 0
     };
-    var _iteratorNormalCompletion = true;
-    var _didIteratorError = false;
-    var _iteratorError = undefined;
+
+    var _iterator = _createForOfIteratorHelper(lines),
+        _step;
 
     try {
-      for (var _iterator = lines[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
         var line = _step.value;
         var textObj = getTextObj();
         textObj.text = line;
@@ -25621,18 +25793,9 @@ var calculateTextDimensions = memoize(function (text, config) {
         dim.lineHeight = Math.round(Math.max(dim.lineHeight, cheight));
       }
     } catch (err) {
-      _didIteratorError = true;
-      _iteratorError = err;
+      _iterator.e(err);
     } finally {
-      try {
-        if (!_iteratorNormalCompletion && _iterator.return != null) {
-          _iterator.return();
-        }
-      } finally {
-        if (_didIteratorError) {
-          throw _iteratorError;
-        }
-      }
+      _iterator.f();
     }
 
     dims.push(dim);
@@ -25646,28 +25809,18 @@ var calculateTextDimensions = memoize(function (text, config) {
 });
 
 var d3Attrs = function d3Attrs(d3Elem, attrs) {
-  var _iteratorNormalCompletion2 = true;
-  var _didIteratorError2 = false;
-  var _iteratorError2 = undefined;
+  var _iterator2 = _createForOfIteratorHelper(attrs),
+      _step2;
 
   try {
-    for (var _iterator2 = attrs[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
       var attr = _step2.value;
       d3Elem.attr(attr[0], attr[1]);
     }
   } catch (err) {
-    _didIteratorError2 = true;
-    _iteratorError2 = err;
+    _iterator2.e(err);
   } finally {
-    try {
-      if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
-        _iterator2.return();
-      }
-    } finally {
-      if (_didIteratorError2) {
-        throw _iteratorError2;
-      }
-    }
+    _iterator2.f();
   }
 };
 

@@ -9,6 +9,7 @@ const MERMAID_DOM_ID_PREFIX = 'classid-';
 
 let relations = [];
 let classes = {};
+let packages = [];
 let classCounter = 0;
 
 let funs = [];
@@ -17,18 +18,24 @@ export const parseDirective = function(statement, context, type) {
   mermaidAPI.parseDirective(this, statement, context, type);
 };
 
-const splitClassNameAndType = function(id) {
+const parseClassName = function(id) {
+  let packageName = '';
   let genericType = '';
   let className = id;
 
   if (id.indexOf('~') > 0) {
     let split = id.split('~');
     className = split[0];
-
     genericType = split[1];
   }
 
-  return { className: className, type: genericType };
+  if (className.indexOf('.') > 0) {
+    let split = className.split('.');
+    packageName = split[0];
+    className = split[1];
+  }
+
+  return { className: className, packageName: packageName, type: genericType };
 };
 
 /**
@@ -37,19 +44,24 @@ const splitClassNameAndType = function(id) {
  * @public
  */
 export const addClass = function(id) {
-  let classId = splitClassNameAndType(id);
-  // Only add class if not exists
-  if (typeof classes[classId.className] !== 'undefined') return;
+  let classDef = parseClassName(id);
+  // Only add class if it does not exist
+  if (typeof classes[classDef.className] !== 'undefined') return;
 
-  classes[classId.className] = {
-    id: classId.className,
-    type: classId.type,
+  classes[classDef.className] = {
+    id: classDef.className,
+    type: classDef.type,
+    packageName: classDef.packageName,
     cssClasses: [],
     methods: [],
     members: [],
     annotations: [],
-    domId: MERMAID_DOM_ID_PREFIX + classId.className + '-' + classCounter
+    domId: MERMAID_DOM_ID_PREFIX + classDef.className + '-' + classCounter
   };
+
+  if (typeof packages[classDef.packageName] === 'undefined') {
+    packages[classDef.packageName] = classDef.packageName;
+  }
 
   classCounter++;
 };
@@ -70,9 +82,17 @@ export const lookUpDomId = function(id) {
 
 export const clear = function() {
   relations = [];
+  packages = {};
   classes = {};
   funs = [];
   funs.push(setupToolTips);
+};
+
+export const getPackage = function(id) {
+  return packages[id];
+};
+export const getPackages = function() {
+  return packages;
 };
 
 export const getClass = function(id) {
@@ -91,8 +111,8 @@ export const addRelation = function(relation) {
   addClass(relation.id1);
   addClass(relation.id2);
 
-  relation.id1 = splitClassNameAndType(relation.id1).className;
-  relation.id2 = splitClassNameAndType(relation.id2).className;
+  relation.id1 = parseClassName(relation.id1).className;
+  relation.id2 = parseClassName(relation.id2).className;
 
   relations.push(relation);
 };
@@ -105,7 +125,7 @@ export const addRelation = function(relation) {
  * @public
  */
 export const addAnnotation = function(className, annotation) {
-  const validatedClassName = splitClassNameAndType(className).className;
+  const validatedClassName = parseClassName(className).className;
   classes[validatedClassName].annotations.push(annotation);
 };
 
@@ -119,7 +139,7 @@ export const addAnnotation = function(className, annotation) {
  * @public
  */
 export const addMember = function(className, member) {
-  const validatedClassName = splitClassNameAndType(className).className;
+  const validatedClassName = parseClassName(className).className;
   const theClass = classes[validatedClassName];
 
   if (typeof member === 'string') {
@@ -301,6 +321,8 @@ export default {
   addClass,
   bindFunctions,
   clear,
+  getPackage,
+  getPackages,
   getClass,
   getClasses,
   addAnnotation,

@@ -83,7 +83,7 @@ export const addClasses = function(classes, g) {
     //   vertexNode = svgLabel;
     // }
 
-    let radious = 0;
+    let radius = 0;
     let _shape = '';
     // Set the shape based parameters
     switch (vertex.type) {
@@ -99,8 +99,8 @@ export const addClasses = function(classes, g) {
       shape: _shape,
       labelText: vertexText,
       classData: vertex,
-      rx: radious,
-      ry: radious,
+      rx: radius,
+      ry: radius,
       class: cssClassStr,
       style: styles.style,
       id: vertex.id,
@@ -116,8 +116,8 @@ export const addClasses = function(classes, g) {
       labelStyle: styles.labelStyle,
       shape: _shape,
       labelText: vertexText,
-      rx: radious,
-      ry: radious,
+      rx: radius,
+      ry: radius,
       class: cssClassStr,
       style: styles.style,
       id: vertex.id,
@@ -129,7 +129,7 @@ export const addClasses = function(classes, g) {
 };
 
 /**
- * Add edges to graph based on parsed graph defninition
+ * Add edges to graph based on parsed graph definition
  * @param {Object} edges The edges to add to the graph
  * @param {Object} g The graph object
  */
@@ -391,7 +391,7 @@ export const draw = function(text, id) {
   //   flowDb.addVertex(subG.id, subG.title, 'group', undefined, subG.classes);
   // }
 
-  // Fetch the verices/nodes and edges/links from the parsed graph definition
+  // Fetch the vertices/nodes and edges/links from the parsed graph definition
   const classes = classDb.getClasses();
   const relations = classDb.getRelations();
 

@@ -302,7 +302,7 @@ export const addEdges = function(edges, g) {
 };
 
 /**
- * Returns the all the styles from classDef statements in the graph definition.
+ * Returns all the styles from classDef statements in the graph definition.
  * @returns {object} classDef styles
  */
 export const getClasses = function(text) {
@@ -326,7 +326,6 @@ export const getClasses = function(text) {
  * @param text
  * @param id
  */
-
 export const draw = function(text, id) {
   logger.info('Drawing flowchart');
   flowDb.clear();
@@ -376,7 +375,7 @@ export const draw = function(text, id) {
     flowDb.addVertex(subG.id, subG.title, 'group', undefined, subG.classes);
   }
 
-  // Fetch the verices/nodes and edges/links from the parsed graph definition
+  // Fetch the vertices/nodes and edges/links from the parsed graph definition
   const vert = flowDb.getVertices();
 
   const edges = flowDb.getEdges();
