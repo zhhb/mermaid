@@ -27,7 +27,8 @@
 <struct>[\n]            /* nothing */
 <struct>[^{}\n]*        { /*console.log('lex-member: ' + yytext);*/  return "MEMBER";}
 
-"package"             return 'PACKAGE';
+"namespace"             return 'NAMESPACE';
+"end"\b\s*            return 'end';
 "class"               return 'CLASS';
 "cssClass"            return 'CSSCLASS';
 "callback"            return 'CALLBACK';
@@ -176,10 +177,6 @@ statements
     | statement NEWLINE statements
     ;
 
-packageName
-    : alphaNumToken { $$=$1; }
-    ;
-
 className
     : alphaNumToken { $$=$1; }
     | alphaNumToken className { $$=$1+$2; }
@@ -190,20 +187,23 @@ className
 statement
     : relationStatement                 { yy.addRelation($1); }
     | relationStatement LABEL           { $1.title =  yy.cleanupLabel($2); yy.addRelation($1); }
+    | packageStatement
     | classStatement
     | methodStatement
-    | annotationStatement
-    | packageStatement                  
+    | annotationStatement                  
     | clickStatement
     | cssClassStatement
     | directive
+    | NAMESPACE alphaNumToken separator statements end { yy.addNamespace($2, $4); }
     ;
 
+separator: NEWLINE | SEMI | EOF ;
+
 classStatement
-    : CLASS className         {yy.addClass($2);}
-    | CLASS className STYLE_SEPARATOR alphaNumToken    {yy.addClass($2);yy.setCssClass($2, $4);}
-    | CLASS className STRUCT_START members STRUCT_STOP {/*console.log($2,JSON.stringify($4));*/yy.addClass($2);yy.addMembers($2,$4);}
-    | CLASS className STYLE_SEPARATOR alphaNumToken STRUCT_START members STRUCT_STOP {yy.addClass($2);yy.setCssClass($2, $4);yy.addMembers($2,$6);}
+    : CLASS className         {yy.addClass($2, undefined);}
+    | CLASS className STYLE_SEPARATOR alphaNumToken    {yy.addClass($2, undefined);yy.setCssClass($2, $4);}
+    | CLASS className STRUCT_START members STRUCT_STOP {/*console.log($2,JSON.stringify($4));*/yy.addClass($2, undefined);yy.addMembers($2,$4);}
+    | CLASS className STYLE_SEPARATOR alphaNumToken STRUCT_START members STRUCT_STOP {yy.addClass($2, undefined);yy.setCssClass($2, $4);yy.addMembers($2,$6);}
     ;
 
 annotationStatement
@@ -246,10 +246,6 @@ relationType
 lineType
     : LINE          {$$=yy.lineType.LINE;}
     | DOTTED_LINE   {$$=yy.lineType.DOTTED_LINE;}
-    ;
-
-packageStatement
-    : PACKAGE packageName className { yy.addPackage($2, $3); }
     ;
     
 clickStatement

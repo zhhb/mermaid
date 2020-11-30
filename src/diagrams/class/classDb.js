@@ -7,9 +7,13 @@ import mermaidAPI from '../../mermaidAPI';
 
 const MERMAID_DOM_ID_PREFIX = 'classid-';
 
+let config = configApi.getConfig();
+
 let relations = [];
 let classes = {};
-let packages = [];
+let namespaces = [];
+let namespaceLookup = {};
+let nsCounter = 0;
 let classCounter = 0;
 
 let funs = [];
@@ -18,8 +22,32 @@ export const parseDirective = function(statement, context, type) {
   mermaidAPI.parseDirective(this, statement, context, type);
 };
 
+// Todo optimize this by caching existing nodes
+const exists = (allNs, _id) => {
+  let res = false;
+  allNs.forEach(ns => {
+    const pos = ns.nodes.indexOf(_id);
+    if (pos >= 0) {
+      res = true;
+    }
+  });
+  return res;
+};
+
+/**
+ * Deletes an id from all subgraphs
+ */
+const makeUniq = (ns, allNamespaces) => {
+  const res = [];
+  ns.nodes.forEach((_id, pos) => {
+    if (!exists(allNamespaces, _id)) {
+      res.push(ns.nodes[pos]);
+    }
+  });
+  return { nodes: res };
+};
+
 const parseClassName = function(id) {
-  let packageName = '';
   let genericType = '';
   let className = id;
 
@@ -29,13 +57,59 @@ const parseClassName = function(id) {
     genericType = split[1];
   }
 
-  if (className.indexOf('.') > 0) {
-    let split = className.split('.');
-    packageName = split[0];
-    className = split[1];
+  return { className: className, type: genericType };
+};
+
+/**
+ * Function called by parser when a namespace/package node definition has been found
+ */
+export const addNamespace = function(_id, list, _title) {
+  let id = _id.trim();
+  let title = _title;
+  if (_id === _title && _title.match(/\s/)) {
+    id = undefined;
   }
 
-  return { className: className, packageName: packageName, type: genericType };
+  function uniq(a) {
+    const prims = { boolean: {}, number: {}, string: {} };
+    const objs = [];
+
+    return a.filter(function(item) {
+      const type = typeof item;
+      if (item.trim() === '') {
+        return false;
+      }
+      if (type in prims) {
+        return prims[type].hasOwnProperty(item) ? false : (prims[type][item] = true); // eslint-disable-line
+      } else {
+        return objs.indexOf(item) >= 0 ? false : objs.push(item);
+      }
+    });
+  }
+
+  let nodeList = [];
+
+  nodeList = uniq(nodeList.concat.apply(nodeList, list));
+  // if (version === 'gen-1') {
+  //   logger.warn('LOOKING UP');
+  //   for (let i = 0; i < nodeList.length; i++) {
+  //     nodeList[i] = lookUpDomId(nodeList[i]);
+  //   }
+  // }
+
+  id = id || 'namespace' + nsCounter;
+  title = title || '';
+  title = common.sanitizeText(title, config);
+  nsCounter = nsCounter + 1;
+  const namespace = { id: id, nodes: nodeList, title: title.trim(), classes: [] };
+
+  console.log('Adding', namespace.id, namespace.nodes);
+
+  // Remove the members in the new subgraph if they already belong to another subgraph
+  namespace.nodes = makeUniq(namespace, namespaces).nodes;
+  namespaces.push(namespace);
+  namespaceLookup[id] = namespace;
+  return id;
 };
 
 /**
@@ -43,7 +117,7 @@ const parseClassName = function(id) {
  * @param id
  * @public
  */
-export const addClass = function(id) {
+export const addClass = function(id, shapeType) {
   let classDef = parseClassName(id);
   // Only add class if it does not exist
   if (typeof classes[classDef.className] !== 'undefined') return;
@@ -51,7 +125,7 @@ export const addClass = function(id) {
   classes[classDef.className] = {
     id: classDef.className,
     type: classDef.type,
-    packageName: classDef.packageName,
+    shapeType: '',
     cssClasses: [],
     methods: [],
     members: [],
@@ -59,8 +133,8 @@ export const addClass = function(id) {
     domId: MERMAID_DOM_ID_PREFIX + classDef.className + '-' + classCounter
   };
 
-  if (typeof packages[classDef.packageName] === 'undefined') {
-    packages[classDef.packageName] = classDef.packageName;
+  if (typeof shapeType !== 'undefined') {
+    classes[classDef.className].shapeType = shapeType;
   }
 
   classCounter++;
@@ -82,17 +156,15 @@ export const lookUpDomId = function(id) {
 
 export const clear = function() {
   relations = [];
-  packages = {};
+  namespaces = [];
+  namespaceLookup = {};
   classes = {};
   funs = [];
   funs.push(setupToolTips);
 };
 
-export const getPackage = function(id) {
-  return packages[id];
-};
-export const getPackages = function() {
-  return packages;
+export const getNamespaces = function() {
+  return namespaces;
 };
 
 export const getClass = function(id) {
@@ -108,8 +180,8 @@ export const getRelations = function() {
 
 export const addRelation = function(relation) {
   logger.debug('Adding relation: ' + JSON.stringify(relation));
-  addClass(relation.id1);
-  addClass(relation.id2);
+  addClass(relation.id1, undefined);
+  addClass(relation.id2, undefined);
 
   relation.id1 = parseClassName(relation.id1).className;
   relation.id2 = parseClassName(relation.id2).className;
@@ -319,10 +391,10 @@ export default {
   parseDirective,
   getConfig: () => configApi.getConfig().class,
   addClass,
+  addNamespace,
   bindFunctions,
   clear,
-  getPackage,
-  getPackages,
+  getNamespaces,
   getClass,
   getClasses,
   addAnnotation,

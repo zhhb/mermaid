@@ -1,4 +1,4 @@
-import { select } from 'd3';
+import { select, selectAll } from 'd3';
 import dagre from 'dagre';
 import graphlib from 'graphlib';
 import { logger } from '../../logger';
@@ -382,30 +382,32 @@ export const draw = function(text, id) {
       return {};
     });
 
-  // let subG;
-  // const subGraphs = flowDb.getSubGraphs();
-  // logger.info('Subgraphs - ', subGraphs);
-  // for (let i = subGraphs.length - 1; i >= 0; i--) {
-  //   subG = subGraphs[i];
-  //   logger.info('Subgraph - ', subG);
-  //   flowDb.addVertex(subG.id, subG.title, 'group', undefined, subG.classes);
-  // }
+  let ns;
+  const namespaces = classDb.getNamespaces();
+  logger.info('Namespaces - ', namespaces);
+  for (let i = namespaces.length - 1; i >= 0; i--) {
+    ns = namespaces[i];
+    logger.info('Namespace - ', ns);
+    classDb.addClass(ns.id, 'group');
+  }
 
   // Fetch the vertices/nodes and edges/links from the parsed graph definition
   const classes = classDb.getClasses();
   const relations = classDb.getRelations();
 
   logger.info(relations);
-  // let i = 0;
-  // for (i = subGraphs.length - 1; i >= 0; i--) {
-  //   subG = subGraphs[i];
+  let i = 0;
+  for (i = namespaces.length - 1; i >= 0; i--) {
+    // for (let i = 0; i < subGraphs.length; i++) {
+    ns = namespaces[i];
 
-  //   selectAll('cluster').append('text');
+    selectAll('cluster').append('text');
 
-  //   for (let j = 0; j < subG.nodes.length; j++) {
-  //     g.setParent(subG.nodes[j], subG.id);
-  //   }
-  // }
+    for (let j = 0; j < ns.nodes.length; j++) {
+      logger.info('Setting up namespaces', ns.nodes[j], ns.id);
+      g.setParent(ns.nodes[j], ns.id);
+    }
+  }
   addClasses(classes, g, id);
   addRelations(relations, g);
 
