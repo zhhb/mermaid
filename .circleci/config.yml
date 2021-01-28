@@ -33,11 +33,11 @@ jobs:
           name: Build
           command: yarn build
       - run:
-          name: Run tests
-          command: yarn test --coverage
-      - run:
           name: Run e2e tests
           command: yarn e2e
+      - run:
+          name: Run tests
+          command: yarn test --coverage
 
 workflows:
   # Below is the definition of your workflow.
